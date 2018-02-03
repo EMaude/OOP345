@@ -1,0 +1,16 @@
+Script started on Sat 03 Feb 2018 02:13:27 PM EST
+emaude@matrix:~/Documents/OOP345/WS2> whoami
+emaude
+emaude@matrix:~/Documents/OOP345/WS2> whoami2 gutenberg_shakespeare g++ -o w2 -std=c++0x Text.cpp w2.cpp
+emaude@matrix:~/Documents/OOP345/WS2> g++ -o w2 -std=c++0x Text.cpp w2.cppwhoami[K2 gutenberg_shakespeare 
+Constructor      0.000 seconds - a.size = 0
+Constructor      0.060 seconds - b.size = 124456
+Copy Assignment  0.000 seconds - a.size = 124456
+Move Assignment  0.000 seconds - a.size = 124456
+Copy Constructor 0.010 seconds - c.size = 124456
+Move Constructor 0.000 seconds - d.size = 124456
+Destructor       0.000 seconds
+emaude@matrix:~/Documents/OOP345/WS2> exit
+exit
+
+Script done on Sat 03 Feb 2018 02:13:48 PM EST
