@@ -38,6 +38,7 @@ public:
 		{
 			keys[lSize + 1] = k;
 			values[lSize + 1] = v;
+			lSize++;
 		}
 		return *this;
 	}

@@ -7,8 +7,7 @@ template <typename K, typename V, int N>
 void display(const std::string& msg, const KVList<K, V, N>& list, int w) {
 	std::cout << msg;
 	for (int i = 0; i < list.size(); i++)
-		std::cout << std::setw(w) << list.key(i)
-		<< " : " << list.value(i) << std::endl;
+		std::cout << std::setw(w) << list.key(i) << " : " << list.value(i) << std::endl;
 }
 
 int main(int argc, char** argv) {

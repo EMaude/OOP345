@@ -1,5 +1,5 @@
 ﻿  w3.cpp
-c:\users\elliot\documents\github\oop345\ws3\w3.cpp(20): warning C4101: 'width': unreferenced local variable
-c:\users\elliot\documents\github\oop345\ws3\w3.cpp(9): warning C4018: '<': signed/unsigned mismatch
-  c:\users\elliot\documents\github\oop345\ws3\w3.cpp(43): note: see reference to function template instantiation 'void display<std::string,double,5>(const std::string &,const KVList<std::string,double,5> &,int)' being compiled
-  WS3.vcxproj -> C:\Users\Elliot\Documents\GitHub\OOP345\WS3\Debug\WS3.exe
+e:\maude\documents\github\oop345\ws3\w3.cpp(19): warning C4101: 'width': unreferenced local variable
+e:\maude\documents\github\oop345\ws3\w3.cpp(9): warning C4018: '<': signed/unsigned mismatch
+  e:\maude\documents\github\oop345\ws3\w3.cpp(42): note: see reference to function template instantiation 'void display<std::string,double,5>(const std::string &,const KVList<std::string,double,5> &,int)' being compiled
+  WS3.vcxproj -> E:\maude\Documents\Github\OOP345\WS3\Debug\WS3.exe
