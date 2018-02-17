@@ -1,0 +1,60 @@
+Script started on Fri 16 Feb 2018 03:34:29 PM EST
+emaude@matrix:~/Documents/OOP345/WS3> whoami
+emaude
+emaude@matrix:~/Documents/OOP345/WS3> gc[K++ -o w3 w3.cpp KVList[K[K[K[K[K[K[K -[K -std=c++0x[1P-std=c++0x
+emaude@matrix:~/Documents/OOP345/WS3> w3
+
+Inventory
+=========
+Product : Pizza
+Price : 4.49
+Product : Pierogi
+Price : 2.56
+Product : PotatoC  Chips
+Price : 2.29
+Product : Black Tea
+Price : 4.49
+Product : Green tea   Tea
+Price : 3.46
+Product : Fruit Tea
+Price : 2.29
+Product : qiu  uit
+
+Price List
+----------
+        Pizza : 4.49
+      Pierogi : 2.56
+ Potato Chips : 2.29
+    Black Tea : 4.49
+    Green Tea : 3.46
+
+Corrections
+-----------
+Product : Black Tea
+Price : 5.29
+Product : qi uit
+
+Price List
+----------
+        Pizza : 4.49
+      Pierogi : 2.56
+ Potato Chips : 2.29
+    Black Tea : 5.29
+    Green Tea : 3.46
+
+Glossary
+========
+Key : CPU
+Definition : central processing unit  
+Key : ALU
+Definition : arithmentic logic unit  
+Key : quit
+
+Entries
+-------
+  CPU : central processing unit
+  ALU : arithmentic logic unit
+emaude@matrix:~/Documents/OOP345/WS3> exit
+exit
+
+Script done on Fri 16 Feb 2018 03:37:13 PM EST

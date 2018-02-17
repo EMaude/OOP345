@@ -36,8 +36,8 @@ public:
 	{
 		if (lSize < N)
 		{
-			keys[lSize + 1] = k;
-			values[lSize + 1] = v;
+			keys[lSize] = k;
+			values[lSize] = v;
 			lSize++;
 		}
 		return *this;
