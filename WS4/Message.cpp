@@ -12,6 +12,27 @@ namespace w4 {
 			message.clear();
 		}
 	}
+	Message & Message::operator=(const Message &msg)
+	{
+		if (this != &msg)
+		{
+			message = msg.message;
+		}
+		return *this;
+	}
+	Message::Message(Message &&msg)
+	{
+		*this = std::move(msg);
+	}
+	Message& Message::operator=(Message &&msg)
+	{
+		if (this != &msg)
+		{
+			message = msg.message;
+			msg.message = nullptr;
+		}
+		return *this;
+	}
 	bool Message::empty() const
 	{
 		return message.empty();

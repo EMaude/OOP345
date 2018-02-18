@@ -21,7 +21,7 @@ namespace w4 {
 		/*!Move Constructor*/
 		Notifications(Notifications&&);
 		/*!Move Assignment*/
-		Notifications&& operator=(Notifications&&);
+		Notifications& operator=(Notifications&&);
 		/*!Destructor*/
 		~Notifications();
 		/*!Adds message to set*/
