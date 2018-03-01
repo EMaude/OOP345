@@ -29,7 +29,7 @@ namespace w4 {
 			
 			for (int i = 0; i < in.size; i++)
 			{
-				this->messages[i] = std::move(in.messages[i]);
+				this->messages[i] = in.messages[i];
 			}
 
 			this->size = in.size;
@@ -82,15 +82,15 @@ namespace w4 {
 				this->size = 0;
 			}
 
-			this->messages = new Message[temp->size + 1];
+			this->messages = new Message[temp->size];
 
-			for (int i = 0; i < temp->size; i++)
+			for (int i = 0; i < temp->size - 1; i++)
 			{
-				this->messages[i] = std::move(temp->messages[i]);
+				this->messages[i] = temp->messages[i];
 			}
 
 			this->size = temp->size + 1;
-			this->messages[this->size] = msg;
+			this->messages[this->size - 1] = msg;
 		}
 	}
 
