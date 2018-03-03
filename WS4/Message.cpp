@@ -1,52 +1,58 @@
 #include "Message.h"
 
+using namespace std;
 namespace w4 {
 	Message::Message()
 	{
 	}
-	Message::Message(std::ifstream &in, char c)
+	Message::Message(ifstream &in, char c)
 	{	
-		int lastread;
-		std::string buff;
+		string buff;
 		getline(in, buff, c);
+		int i = 0;
 
-		buff.substr(0, buff.find_first_of(' ')).copy(user, 16); // get first word
-		lastread = buff.find_first_of(' ');
-
-		if (buff.find_first_of('@') != std::string::npos) {
-			int i = buff.find_first_of('@');
-			while (buff[i] != ' ')
-			{
-				i++;
-			}
-
-			buff.substr(buff.find_first_of('@') + 1, i).copy(reply, 16);
-			lastread = i;
+		user = buff.substr(0, buff.find(' ', 1)); //Find first word and make it username
+	    
+		if (buff.find_first_of('@') != string::npos) //If a @ symbol exists
+		{
+			i = buff.find_first_of('@');
+			reply = buff.substr(i + 1, buff.find(' ', i));
+		}
+		else
+		{
+			i = buff.find(' ', 1);
 		}
 
-		buff.substr(lastread + 1, buff.find_first_of('\n')).copy(tweet, 32);
+		tweet = buff.substr(i + 1, buff.find_first_of('/n'));
+
+		if (tweet.length() < 1 || user.length() < 1)
+		{
+			tweet.clear();
+			user.clear();
+			reply.clear();
+		}
 
 	}
 	Message &Message::operator=(const Message &msg)
 	{
 		if (this != &msg)
 		{
-			strcpy(tweet, msg.tweet);
-			strcpy(user, msg.user);
-			strcpy(reply, msg.reply);
+			tweet = msg.tweet;
+			user = msg.user;
+			reply = msg.reply;
 		}
 		return *this;
 	}
 	bool Message::empty() const
 	{
-		return (strlen(tweet) != 0) ? false : true;
+		return tweet.empty();
 	}
 	void Message::display(std::ostream &os) const
 	{
-		if (empty())
+		if (!empty())
 		{
 			os << "Message\n" << "User : " << user << std::endl;
-			if (strlen(reply) != 0)
+			if (reply.empty())
 			{
 				os << "Reply : " << reply << std::endl;
 			}
