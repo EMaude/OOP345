@@ -9,7 +9,7 @@ namespace w4 {
 	{
 		static const int MAXSIZE { 10 };
 	private:
-		Message *messages;
+		Message messages[MAXSIZE];
 		int size;
 	public:
 		/*!Sets object to safe empty state*/

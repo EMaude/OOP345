@@ -4,14 +4,11 @@ namespace w4 {
 	Notifications::Notifications()
 	{
 		size = 0;
-		messages = nullptr;
 	}
 
 	Notifications::Notifications(const Notifications& in)
 	{
 		size = 0;
-		messages = nullptr;
-
 		*this = in;
 	}
 
@@ -19,14 +16,6 @@ namespace w4 {
 	{
 		if (&in != this)
 		{
-			if (this->messages != nullptr)
-			{
-				delete[] this->messages;
-				this->messages = nullptr;
-			}
-
-			this->messages = new Message[in.size];
-			
 			for (int i = 0; i < in.size; i++)
 			{
 				this->messages[i] = in.messages[i];
@@ -46,14 +35,11 @@ namespace w4 {
 	{
 		if (this != &in)
 		{
-			if(this->messages != nullptr)
-			{ 
-				delete[] messages;
-				messages = nullptr;
+			for (int i = 0; i < in.size; i++)
+			{
+				this->messages[i] = in.messages[i];
 			}
-			this->messages = in.messages;
 			this->size = in.size;
-			in.messages = nullptr;
 			in.size = 0;
 		}
 		return *this;
@@ -62,41 +48,20 @@ namespace w4 {
 	Notifications::~Notifications()
 	{	
 		size = 0; 
-		if (messages != nullptr)
-		{
-			delete[] messages;
-			messages = nullptr;
-		}
 	}
 
 	void Notifications::operator+=(const Message &msg)
 	{
 		if (size < MAXSIZE)
 		{
-			Notifications *temp;
-			temp = std::move(this);
-			if (this->messages != nullptr)
-			{
-				delete[] this->messages;
-				this->messages = nullptr;
-				this->size = 0;
-			}
-
-			this->messages = new Message[temp->size];
-
-			for (int i = 0; i < temp->size - 1; i++)
-			{
-				this->messages[i] = temp->messages[i];
-			}
-
-			this->size = temp->size + 1;
-			this->messages[this->size - 1] = msg;
+			messages[size] = msg;
+			size += 1;
 		}
 	}
 
 	void Notifications::display(std::ostream & os) const
 	{
-		for (int i = 0; i < size ; i++)
+		for (int i = 0; i < size; i++)
 		{
 			messages[i].display(os);
 		}

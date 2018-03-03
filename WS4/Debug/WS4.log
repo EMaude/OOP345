@@ -1,0 +1,4 @@
+﻿  Message.cpp
+c:\users\elliot\documents\github\oop345\ws4\message.cpp(26): warning C4305: 'argument': truncation from 'int' to 'const char'
+c:\users\elliot\documents\github\oop345\ws4\message.cpp(26): warning C4309: 'argument': truncation of constant value
+  WS4.vcxproj -> C:\Users\Elliot\Documents\GitHub\OOP345\WS4\Debug\WS4.exe
