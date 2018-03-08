@@ -3,6 +3,7 @@
 namespace w4 {
 	Notifications::Notifications()
 	{
+		messages = nullptr;
 		size = 0;
 	}
 
@@ -16,6 +17,12 @@ namespace w4 {
 	{
 		if (&in != this)
 		{
+			if (size > 0)
+			{
+				delete[] messages;
+				messages = nullptr;
+			}
+			messages = new Message[in.size];
 			for (int i = 0; i < in.size; i++)
 			{
 				this->messages[i] = in.messages[i];
@@ -35,27 +42,48 @@ namespace w4 {
 	{
 		if (this != &in)
 		{
-			for (int i = 0; i < in.size; i++)
-			{
-				this->messages[i] = in.messages[i];
-			}
+			messages = in.messages;
 			this->size = in.size;
 			in.size = 0;
+			in.messages = nullptr;
 		}
 		return *this;
 	}
 
 	Notifications::~Notifications()
 	{	
-		size = 0; 
+		size = 0;
+		delete[] messages;
+		messages = nullptr;
 	}
 
 	void Notifications::operator+=(const Message &msg)
 	{
-		if (size < MAXSIZE)
+		if (size < MAXSIZE && !msg.empty())
 		{
-			messages[size] = msg;
-			size += 1;
+			if (size > 0)
+			{
+				Notifications temp = std::move(*this);
+				
+				delete[] messages;
+				messages = nullptr;
+				size = 0;
+
+				messages = new Message[temp.size + 1];
+				for (int i = 0; i < temp.size; i++)
+				{
+					messages[i] = temp.messages[i];
+				}
+
+				size = temp.size + 1;
+				messages[size - 1] = msg;
+			}
+			else
+			{
+				messages = new Message[1];
+				messages[0] = msg;
+				size = 1;
+			}
 		}
 	}
 

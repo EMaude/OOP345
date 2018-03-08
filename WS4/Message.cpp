@@ -9,21 +9,24 @@ namespace w4 {
 	{	
 		string buff;
 		getline(in, buff, c);
-		int i = 0;
+		size_t i = 0;
 
-		user = buff.substr(0, buff.find(' ', 1)); //Find first word and make it username
-	    
-		if (buff.find_first_of('@') != string::npos) //If a @ symbol exists
+		if (buff.find(' ', 1) != string::npos)
 		{
-			i = buff.find_first_of('@');
-			reply = buff.substr(i + 1, buff.find(' ', i));
-		}
-		else
-		{
-			i = buff.find(' ', 1);
-		}
+			user = buff.substr(0, buff.find(' ', 1)); //Find first word and make it username
 
-		tweet = buff.substr(i + 1, buff.find_first_of('/n'));
+			if (buff.find('@') != string::npos) //If a @ symbol exists
+			{
+				i = buff.find('@');
+				reply = buff.substr(i + 1, buff.find(' ', i + 1));
+			}
+			else
+			{
+				i = buff.find(' ', 1);
+			}
+
+			tweet = buff.substr(i + 1, buff.find('\n', 2));
+		}
 
 		if (tweet.length() < 1 || user.length() < 1)
 		{
@@ -39,7 +42,13 @@ namespace w4 {
 		{
 			tweet = msg.tweet;
 			user = msg.user;
-			reply = msg.reply;
+			if (msg.reply.length() > 0)
+			{
+				reply = msg.reply;
+			}
+			else {
+				reply.clear();
+			}
 		}
 		return *this;
 	}
@@ -52,7 +61,8 @@ namespace w4 {
 		if (!empty())
 		{
 			os << "Message\n" << "User : " << user << std::endl;
-			if (reply.empty())
+
+			if (!reply.empty())
 			{
 				os << "Reply : " << reply << std::endl;
 			}

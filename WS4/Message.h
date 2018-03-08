@@ -18,7 +18,7 @@ namespace w4 {
 			c is the character that delimits each record*/
 		Message(std::ifstream& in, char c);
 		/*!Copy Constructor*/
-		Message& Message::operator=(const Message&);
+		Message& operator=(const Message&);
 		/*!returns true if object is in safe empty state*/
 		bool empty() const;
 		/*!displays message objects in the container*/
