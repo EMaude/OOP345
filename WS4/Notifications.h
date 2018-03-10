@@ -7,7 +7,7 @@
 namespace w4 {
 	class Notifications
 	{
-		static const int MAXSIZE { 10 };
+		static const int MAXSIZE = 10;
 	private:
 		Message *messages;
 		int size;
@@ -15,13 +15,13 @@ namespace w4 {
 		/*!Sets object to safe empty state*/
 		Notifications();
 		/*!Copy Constructor*/
-		Notifications(const Notifications&);
+		Notifications(const Notifications &in);
 		/*!Copy Assignment*/
-		Notifications& operator=(const Notifications&);
+		Notifications& operator=(const Notifications &in);
 		/*!Move Constructor*/
 		Notifications(Notifications&&);
 		/*!Move Assignment*/
-		Notifications& operator=(Notifications&&);
+		Notifications& operator=(Notifications &&in);
 		/*!Destructor*/
 		~Notifications();
 		/*!Adds message to set*/

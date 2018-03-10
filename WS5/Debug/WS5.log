@@ -1,0 +1,5 @@
+﻿  W5.cpp
+  Grades.cpp
+e:\maude\documents\github\oop345\ws5\grades.cpp(47): warning C4101: 'fail': unreferenced local variable
+  Generating Code...
+  WS5.vcxproj -> E:\maude\Documents\Github\OOP345\WS5\Debug\WS5.exe

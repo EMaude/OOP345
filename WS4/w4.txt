@@ -1,0 +1,28 @@
+Script started on Fri 09 Mar 2018 10:59:06 AM EST
+emaude@matrix:~/Documents/OOP345/WS4> whoami
+emaude
+emaude@matrix:~/Documents/OOP345/WS4> whoamiscript w4.txtls[Kcd Documents/OOP345/WS4exit[Kg++ -std=c++0x W4.cpp Notifications.cpp Message.cpp -o W4
+emaude@matrix:~/Documents/OOP345/WS4> g++ -std=c++0x W4.cpp Notifications.cpp Message.cpp -o W4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cwhoami[Kscript w4.txtls[Kcd Documents/OOP345/WS4exit[Kg++ -std=c++0x W4.cpp Notifications.cpp Message.cpp -o W4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cwhoami[Ksqlplus dbs301_181e19/45257210@oracle12c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cwhoami[Kg++ -std=c++0x W4.cpp Notifications.cpp Message.cpp -o W4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kcd Documents/OOP345/WS4ls[Kscript w4.txt[7Pwhoamig++ -std=c++0x W4.cpp Notifications.cpp Message.cpp -o W4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kw[KW4.t[K[K[K[K./W4 w5_da[K[Ktest.dat
+
+Notifications
+=============
+
+Message
+User : jim
+Tweet : Workshop 5 is cool
+Message
+User : harry
+Reply : jim workin
+Tweet : jim working on workshop 5 now
+Message
+User : dave
+Tweet : what the ^#$%!
+Message
+User : john
+Reply : harry I'm d
+Tweet : harry I'm done
+Press any key to continue ... 
+emaude@matrix:~/Documents/OOP345/WS4> exii[Kt
+exit
+
+Script done on Fri 09 Mar 2018 10:59:51 AM EST
