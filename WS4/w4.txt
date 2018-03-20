@@ -12,14 +12,14 @@ User : jim
 Tweet : Workshop 5 is cool
 Message
 User : harry
-Reply : jim workin
+Reply : jim
 Tweet : jim working on workshop 5 now
 Message
 User : dave
 Tweet : what the ^#$%!
 Message
 User : john
-Reply : harry I'm d
+Reply : harry
 Tweet : harry I'm done
 Press any key to continue ... 
 emaude@matrix:~/Documents/OOP345/WS4> exii[Kt

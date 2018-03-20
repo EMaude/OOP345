@@ -18,14 +18,14 @@ namespace w4 {
 			if (buff.find('@') != string::npos) //If a @ symbol exists
 			{
 				i = buff.find('@');
-				reply = buff.substr(i + 1, buff.find(' ', i + 1));
+				reply = buff.substr(i + 1, buff.find(' ', i + 1) - (i + 1));
 			}
 			else
 			{
 				i = buff.find(' ', 1);
 			}
 
-			tweet = buff.substr(i + 1, buff.find('\n', 2));
+			tweet = buff.substr(i + 1, buff.find('\n', 2) - (i + 1));
 		}
 
 		if (tweet.length() < 1 || user.length() < 1)

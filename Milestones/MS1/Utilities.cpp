@@ -1,3 +1,6 @@
+//Elliot Maude
+//032830127
+
 #include "Utilities.h"
 
 char Utilities::delimiter;
@@ -54,7 +57,7 @@ int Utilities::rtrim(std::string &str)
 	int i = 0;
 	while (!str.empty() && str.back() == ' ')
 	{
-		str.pop_back();
+		str.erase(str.length() - 1, 1);
 		i++;
 	}
 	return i;

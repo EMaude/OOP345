@@ -1,5 +1,8 @@
+//Elliot Maude
+//032830127
 #include "Task.h"
 #include "Utilities.h"
+
 size_t Task::field_width;
 
 Task::Task(const std::string& in)
@@ -14,7 +17,7 @@ Task::Task(const std::string& in)
     size_t pos = 0;
     name = util.nextToken(in, pos, more);
     pos += name.length() + 1;
-
+	
     if(more)
     {
 			slots = util.nextToken(in, pos, more);
