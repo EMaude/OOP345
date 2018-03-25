@@ -15,22 +15,43 @@ Task::Task(const std::string& in)
 
     bool more;
     size_t pos = 0;
-    name = util.nextToken(in, pos, more);
-    pos += name.length() + 1;
+	try {
+		name = util.nextToken(in, pos, more);
+	}
+	catch (const char* msg)
+	{
+		std::cout << msg << std::endl;
+	}
 	
     if(more)
     {
+		try{
 			slots = util.nextToken(in, pos, more);
-			pos += slots.length() + 1;
+		}
+		catch (const char* msg)
+		{
+			std::cout << msg << std::endl;
+		}
 	}
 	if (more)
 	{
-		nextTask[0] = util.nextToken(in, pos, more);
-		pos += nextTask[0].length() + 1;
+		try{
+			nextTask[0] = util.nextToken(in, pos, more);
+		}
+		catch (const char* msg)
+		{
+			std::cout << msg << std::endl;
+		}
 	}
     if(more)
     {
-        nextTask[1] = util.nextToken(in, pos, more);
+		try {
+			nextTask[1] = util.nextToken(in, pos, more);
+		}
+		catch (const char* msg)
+		{
+			std::cout << msg << std::endl;
+		}
     }
 
 	if (field_width < util.getFieldWidth())

@@ -1,0 +1,3 @@
+﻿  Item.cpp
+e:\maude\documents\github\oop345\milestones\ms2\item.cpp(75): warning C4101: 'msg': unreferenced local variable
+  MS2.vcxproj -> E:\maude\Documents\Github\OOP345\Milestones\MS2\Debug\MS2.exe

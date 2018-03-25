@@ -17,7 +17,7 @@ size_t Utilities::getFieldWidth() const
 {
     return field_width;
 }
-const std::string Utilities::nextToken(const std::string& in, size_t& pos, bool& more)
+const std::string Utilities::nextToken(const std::string& in, size_t &pos, bool& more)
 {
 	int i = 0;
 
@@ -31,12 +31,17 @@ const std::string Utilities::nextToken(const std::string& in, size_t& pos, bool&
         more = true;
     }
 
-	pos += trim(result);
+	pos += trim(result) + result.length() + 1;
     
 	if(result.length() > field_width)
     {
         setFieldWidth(result.length());
     }
+
+	if (result.empty())
+	{
+		throw "Empty String";
+	}
 
     return result;
 }
