@@ -24,28 +24,36 @@ const std::string Utilities::nextToken(const std::string& in, size_t &pos, bool&
     std::string result;
     more = false;
 
-	result = in.substr(pos, (in.find(delimiter, pos) - pos));
-	
-	pos += trim(result) + result.length() + 1;
-
-	if (result.find_first_not_of(' ') != std::string::npos || result.empty())
+	if (in.find(delimiter, pos) <= pos + 1)
 	{
-
-		if (in.length() > pos)
-		{
-			more = true;
-		}
-
-		if (result.length() > field_width)
-		{
-			setFieldWidth(result.length());
-		}
+		throw in + " <- No token before delimiter";
+		more = false;
 	}
 	else
 	{
-		throw "Empty String";
-	}
+		result = in.substr(pos, (in.find(delimiter, pos) - pos));
 
+		pos += trim(result) + result.length() + 1;
+
+		if (result.find_first_not_of(' ') != std::string::npos && !result.empty())
+		{
+			std::string temp = in;
+			rtrim(temp);
+			if (temp.length() > pos)
+			{
+				more = true;
+			}
+
+			if (result.length() > field_width)
+			{
+				setFieldWidth(result.length());
+			}
+		}
+		else
+		{
+			throw "Empty String";
+		}
+	}
     return result;
 }
 

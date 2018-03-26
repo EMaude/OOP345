@@ -1,0 +1,85 @@
+Script started on Mon 26 Mar 2018 03:40:10 PM EDT
+emaude@matrix:~/Documents/OOP345/MS2> whoami
+emaude
+emaude@matrix:~/Documents/OOP345/MS2> g++ -std=c++0x CustomerItem.cpp CustomerOrder.cpp Item.cpp Utilities.cpp Milestone_2.cpp 
+emaude@matrix:~/Documents/OOP345/MS2>./a.out CustomerOrders_Malformed.dat ItemList_Malformed.dat "|"
+Command Line Arguments
+----------------------
+Customer Order File Specified = CustomerOrders_Malformed.dat
+Item File Specified           = ItemList_Malformed.dat
+File Record Field Delimiter   = |
+
+
+*** Load and Accept the Customer Orders ***
+no name found: Empty String
+not enough records
+||| <- No token before delimiter
+| Peter McIntyre     | <- No token before delimiter
+no name found: Empty String
+not enough records
+
+List of Accepted Customer Orders
+--------------------------------
+Fardad Soleimanloo  : Dell Precision 3600
+- [00000] CPU
+- [00000] Memory
+- [00000] Memory
+Joseph Hughes       : HP Z230            
+- [00000] CPU
+- [00000] Memory
+Chris Szalwinski    : HP Z350            
+- [00000] CPU
+- [00000] Memory
+- [00000] SSD
+- [00000] GPU
+Elliott Coleshill   : HP Apollo 1000     
+- [00000] CPU
+- [00000] MEMORY
+- [00000] Power Supply
+- [00000] GPU
+
+*** Load and Accept the Items in Stock ***
+|| <- No token before delimiter
+|Fan|Fan| Place fan       |900| CoolMasters R56||| <- No token before delimiter
+ | | | | | <- No token before delimiter
+||PCIe SSD| <- No token before delimiter
+
+List of Items in Stock
+----------------------
+CPU         [00300] From CPU          To Remove CPU  
+                  : Central Processing Unit
+Memory      [00400] From Memory       To Remove Memory
+                  : Samsung Memory Stick
+GPU         [00500] From GPU          To Remove GPU  
+                  : Nvidia Geforce 750M
+Power Supply[00100] From Power Supply To Remove Power Supply
+                  : no detailed description
+
+*** Process the Customer Orders ***
+
+List of Processed Customer Orders
+---------------------------------
+Fardad Soleimanloo  : Dell Precision 3600
++ [00300] CPU
++ [00400] Memory
++ [00401] Memory
+Joseph Hughes       : HP Z230            
++ [00301] CPU
++ [00402] Memory
+Chris Szalwinski    : HP Z350            
++ [00302] CPU
++ [00403] Memory
+- [00000] SSD
++ [00500] GPU
+Elliott Coleshill   : HP Apollo 1000     
++ [00303] CPU
+- [00000] MEMORY
++ [00100] Power Supply
++ [00501] GPU
+
+Done!
+Press Enter Key to Exit ... 
+emaude@matrix:~/Documents/OOP345/MS2> exit
+exit
+
+Script done on Mon 26 Mar 2018 03:41:47 PM EDT

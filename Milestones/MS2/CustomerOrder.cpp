@@ -38,19 +38,24 @@ CustomerOrder::CustomerOrder(const std::string &str)
 	while (more)
 	{
 		std::string stemp;
+		bool failed = false;
 		try {
 			stemp = util.nextToken(str, pos, more);
 		}
 		catch (const char* msg)
 		{
 			std::cerr << "Error reading CustItem #" << nOrders << " : "<< msg << std::endl;
+			failed = true;
 		}
-		temp[nOrders] = CustomerItem(stemp);
-		nOrders++;
-	
-		if (nOrders > 10) { 
-			std::cerr << "Max Size reached in CustomerOrder Constructor";
-			terminate(); 
+		if (!failed)
+		{
+			temp[nOrders] = CustomerItem(stemp);
+			nOrders++;
+
+			if (nOrders > 10) {
+				std::cerr << "Max Size reached in CustomerOrder Constructor";
+				std::terminate();
+			}
 		}
 	}
 
@@ -80,6 +85,10 @@ CustomerOrder::CustomerOrder(const CustomerOrder &src)
 
 CustomerOrder::~CustomerOrder()
 {
+	if (order != nullptr)
+	{
+		delete[] order;
+	}
 }
 
 unsigned int CustomerOrder::noOrders() const
@@ -87,15 +96,14 @@ unsigned int CustomerOrder::noOrders() const
 	return nOrders;
 }
 
-const std::string & CustomerOrder::operator[](unsigned int i) const
+const std::string& CustomerOrder::operator[](unsigned int i) const
 {
-	std::string temp;
-	if (i < nOrders)
+	if (i < nOrders || i < 0)
 	{
 		std::cerr << "Out of range" << std::endl;
+		i = 0;
 	}
-	temp = order[i].getName();
-	return temp;
+	return order[i].getName();
 }
 
 void CustomerOrder::fill(Item &item)
