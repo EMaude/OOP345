@@ -20,20 +20,29 @@ namespace w7 {
 			}
 		}
 
+		m_FW = FW;
+		m_ND = ND;
 	}
 
 	template<class T>
 	T DataTable<T>::mean() const
 	{
-		T mean = std::accumulate(m_y.begin(), m_y.end()) / m_y.size();
+		T mean = std::accumulate(m_y.begin(), m_y.end(), 0) / m_y.size();
 		return mean;
 	}
 
 	template<class T>
 	T DataTable<T>::sigma() const
 	{
-		T sigma = sqrt( (std::accumulate(m_y.begin(), m_y.end()) * exp(m_y[i] - mean()) ) / m_y.size() - 1);
-		return sigma;
+		//USE LAMBDA
+
+		std::vector<T> diffMeanSq;
+		for (int i = 0; i < m_y.size(); i++){ temp = std::exp(m_y[i] - mean());}
+
+		T sumDiffMeanSq = std::accumulate(diffMeanSq.begin(), diffMeanSq.end(), 0);
+
+		T ssd = sqrt(sumDiffMeanSq / m_y.size() - 1);
+		return ssd;
 	}
 
 	template<class T>
@@ -47,16 +56,38 @@ namespace w7 {
 	template<class T>
 	void DataTable<T>::regression(T & slope, T & y_intercept) const
 	{
+		T sumX = std::accumulate(m_x.begin(), m_x.end(), 0);
+		T expSumX = std::exp(sumX);
+		T sumY = std::accumulate(m_y.begin(), m_y.end(), 0);
+		int size = m_x.size();
+
+		slope = ((size * (sumX * sumY)) - (sumX * sumY)) / ((n * expSumX) - expSumX);
+		y_intercept = (sumY - (slope * sumX)) / size;
 	}
 
 	template<class T>
-	void DataTable<T>::display(std::ostream &) const
+	void DataTable<T>::display(std::ostream &os) const
 	{
+		os.width(m_FW);
+		os << std::right << "X";
+		os.width(m_FW);
+		os << std::right << "X";
+
+		for (int i = 0; i < m_x.size(); i++)
+		{
+			os.width(m_FW);
+			os.precision(m_ND);
+			os << std::right << std::fixed << m_X[i];
+
+			os.width(m_FW);
+			os.precision(m_ND);
+			os << std::right << std::fixed << m_Y[i];
+		}
 	}
 
-	template<class T>
-	std::ostream& operator<<(std::ostream &, const DataTable&)
+	std::ostream& operator<<(std::ostream &os, const DataTable &in)
 	{
-		// TODO: insert return statement here
+		in.display(os);
+		return os;
 	}
 }
