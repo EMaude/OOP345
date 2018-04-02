@@ -1,5 +1,8 @@
 #ifndef PRODUCT_H
 #define PRODUCT_H
+#include <iostream>
+#include <fstream>
+#include <string>
 
 #include "IProduct.h"
 
@@ -7,16 +10,13 @@ namespace w6 {
 	class Product : public iProduct
 	{
 	private:
+		int productNum;
 		double cost;
 	public:
-		Product();
-		~Product();
-
+		Product(std::string);
 		double getCharge() const;
+		int getProdNum() const;
 		void display(std::ostream&) const;
 	};
-
-	std::ostream& operator<<(std::ostream&, const iProduct&);
-	iProduct* readProduct(std::ifstream&);
 }
 #endif //PRODUCT_H
