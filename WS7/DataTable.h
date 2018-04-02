@@ -10,6 +10,8 @@
 #include <algorithm>
 #include <functional>
 
+#define POSITIVE(n) ((n) < 0 ? 0 - (n) : (n))
+
 namespace w7 {
 	template <class T>
 	class DataTable
@@ -51,24 +53,25 @@ namespace w7 {
 		//! returns the mean value of the dependent coordinate
 		T mean() const
 		{
-			T mean = std::accumulate(m_y.begin(), m_y.end(), 0) / m_y.size();
+			T mean = std::accumulate(m_y.begin(), m_y.end(), 0.0) / m_y.size();
 			return mean;
 		}
 
 		//! returns the standard deviation of the dependent coordinates
 		T sigma() const
-		{
+		{	
 			T m = mean();
-			T sumDiffMeanSq = std::accumulate(m_y.begin(), m_y.end(), 0.0, [&](T a, T b) { return a + std::exp(b - m); });
-			T ssd = sqrt(sumDiffMeanSq / m_y.size() - 1);
+			T sumDiffMeanSq = std::accumulate(m_y.begin(), m_y.end(), 0.0, [&](T a, T b) { return a += std::pow(b - m, 2); });
+			T ssd = sqrt(sumDiffMeanSq / (m_y.size() - 1));
 			return ssd;
 		}
 
 		//! returns the median value of the dependent coordinate
 		T median() const
 		{
-			std::sort(&m_y.begin(), &m_y.end());
-			T median = m_y[m_y.size() / 2];
+			std::vector<T> sorted = m_y;
+			std::sort(sorted.begin(), sorted.end());
+			T median = sorted[sorted.size() / 2];
 			return median;
 		}
 
@@ -76,11 +79,12 @@ namespace w7 {
 		void regression(T& slope, T& y_intercept) const
 		{
 			T sumX = std::accumulate(m_x.begin(), m_x.end(), 0.0);
-			T expSumX = std::exp(sumX);
+			T expSumX = std::accumulate(m_x.begin(), m_x.end(), 0.0, [&](T a, T b) {return a += std::pow(b, 2); });
 			T sumY = std::accumulate(m_y.begin(), m_y.end(), 0.0);
-			int size = m_x.size();
+			T sumXY = std::inner_product(m_x.begin(), m_x.end(), m_y.begin(), 0.0);
+			T size = m_x.size();
 
-			slope = ((size * (sumX * sumY)) - (sumX * sumY)) / ((size * expSumX) - expSumX);
+			slope = ((size * (sumXY)) - (sumX * sumY)) / ((size * expSumX) - std::pow(sumX, 2));
 			y_intercept = (sumY - (slope * sumX)) / size;
 		}
 

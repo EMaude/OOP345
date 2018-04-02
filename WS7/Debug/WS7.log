@@ -1,50 +1,45 @@
 ﻿  w7.cpp
-c:\users\maude\documents\github\oop345\ws7\datatable.h(78): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  c:\users\maude\documents\github\oop345\ws7\datatable.h(77): note: while compiling class template member function 'void w7::DataTable<float>::regression(T &,T &) const'
+e:\maude\documents\github\oop345\ws7\datatable.h(81): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  e:\maude\documents\github\oop345\ws7\datatable.h(80): note: while compiling class template member function 'void w7::DataTable<float>::regression(T &,T &) const'
           with
           [
               T=float
           ]
-  c:\users\maude\documents\github\oop345\ws7\w7.cpp(34): note: see reference to function template instantiation 'void w7::DataTable<float>::regression(T &,T &) const' being compiled
+  e:\maude\documents\github\oop345\ws7\w7.cpp(34): note: see reference to function template instantiation 'void w7::DataTable<float>::regression(T &,T &) const' being compiled
           with
           [
               T=float
           ]
-  c:\users\maude\documents\github\oop345\ws7\w7.cpp(28): note: see reference to class template instantiation 'w7::DataTable<float>' being compiled
-c:\users\maude\documents\github\oop345\ws7\datatable.h(80): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\maude\documents\github\oop345\ws7\datatable.h(62): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  c:\users\maude\documents\github\oop345\ws7\datatable.h(60): note: while compiling class template member function 'float w7::DataTable<float>::sigma(void) const'
-  c:\users\maude\documents\github\oop345\ws7\w7.cpp(39): note: see reference to function template instantiation 'float w7::DataTable<float>::sigma(void) const' being compiled
-c:\users\maude\documents\github\oop345\ws7\datatable.h(54): warning C4244: 'initializing': conversion from 'unsigned int' to 'float', possible loss of data
-  c:\users\maude\documents\github\oop345\ws7\datatable.h(53): note: while compiling class template member function 'float w7::DataTable<float>::mean(void) const'
-  c:\users\maude\documents\github\oop345\ws7\w7.cpp(39): note: see reference to function template instantiation 'float w7::DataTable<float>::mean(void) const' being compiled
-c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.13.26128\include\numeric(25): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  c:\users\maude\documents\github\oop345\ws7\datatable.h(62): note: see reference to function template instantiation '_Ty std::accumulate<std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<float>>>,double,w7::DataTable<float>::sigma::<lambda_ee5821c8a3e7145798147b78623ce271>>(_InIt,const _InIt,_Ty,_Fn)' being compiled
+  e:\maude\documents\github\oop345\ws7\w7.cpp(28): note: see reference to class template instantiation 'w7::DataTable<float>' being compiled
+e:\maude\documents\github\oop345\ws7\datatable.h(82): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\maude\documents\github\oop345\ws7\datatable.h(83): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\maude\documents\github\oop345\ws7\datatable.h(84): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\maude\documents\github\oop345\ws7\datatable.h(85): warning C4244: 'initializing': conversion from 'unsigned int' to 'float', possible loss of data
+e:\maude\documents\github\oop345\ws7\datatable.h(64): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  e:\maude\documents\github\oop345\ws7\datatable.h(62): note: while compiling class template member function 'float w7::DataTable<float>::sigma(void) const'
+  e:\maude\documents\github\oop345\ws7\w7.cpp(39): note: see reference to function template instantiation 'float w7::DataTable<float>::sigma(void) const' being compiled
+e:\maude\documents\github\oop345\ws7\datatable.h(56): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  e:\maude\documents\github\oop345\ws7\datatable.h(55): note: while compiling class template member function 'float w7::DataTable<float>::mean(void) const'
+  e:\maude\documents\github\oop345\ws7\w7.cpp(39): note: see reference to function template instantiation 'float w7::DataTable<float>::mean(void) const' being compiled
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\numeric(25): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  e:\maude\documents\github\oop345\ws7\datatable.h(82): note: see reference to function template instantiation '_Ty std::accumulate<std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<float>>>,double,w7::DataTable<float>::regression::<lambda_7bc4e09739a00a72f733138fd903b471>>(_InIt,_InIt,_Ty,_Fn)' being compiled
           with
           [
               _Ty=double,
               _InIt=std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<float>>>,
-              _Fn=w7::DataTable<float>::sigma::<lambda_ee5821c8a3e7145798147b78623ce271>
+              _Fn=w7::DataTable<float>::regression::<lambda_7bc4e09739a00a72f733138fd903b471>
           ]
-  c:\users\maude\documents\github\oop345\ws7\datatable.h(60): note: while compiling class template member function 'float w7::DataTable<float>::sigma(void) const'
-  c:\users\maude\documents\github\oop345\ws7\w7.cpp(39): note: see reference to function template instantiation 'float w7::DataTable<float>::sigma(void) const' being compiled
-c:\users\maude\documents\github\oop345\ws7\datatable.h(95): warning C4018: '<': signed/unsigned mismatch
-  c:\users\maude\documents\github\oop345\ws7\datatable.h(89): note: while compiling class template member function 'void w7::DataTable<float>::display(std::ostream &) const'
-  c:\users\maude\documents\github\oop345\ws7\datatable.h(111): note: see reference to function template instantiation 'void w7::DataTable<float>::display(std::ostream &) const' being compiled
-c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.13.26128\include\numeric(25): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.13.26128\include\numeric(35): note: see reference to function template instantiation '_Ty std::accumulate<_InIt,_Ty,std::plus<void>>(_InIt,const _InIt,_Ty,_Fn)' being compiled
+  e:\maude\documents\github\oop345\ws7\datatable.h(80): note: while compiling class template member function 'void w7::DataTable<float>::regression(T &,T &) const'
           with
           [
-              _Ty=int,
-              _InIt=std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<float>>>,
-              _Fn=std::plus<void>
+              T=float
           ]
-  c:\users\maude\documents\github\oop345\ws7\datatable.h(54): note: see reference to function template instantiation '_Ty std::accumulate<std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<float>>>,int>(_InIt,const _InIt,_Ty)' being compiled
+  e:\maude\documents\github\oop345\ws7\w7.cpp(34): note: see reference to function template instantiation 'void w7::DataTable<float>::regression(T &,T &) const' being compiled
           with
           [
-              _Ty=int,
-              _InIt=std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<float>>>
+              T=float
           ]
-  c:\users\maude\documents\github\oop345\ws7\datatable.h(53): note: while compiling class template member function 'float w7::DataTable<float>::mean(void) const'
-  c:\users\maude\documents\github\oop345\ws7\w7.cpp(39): note: see reference to function template instantiation 'float w7::DataTable<float>::mean(void) const' being compiled
-  WS7.vcxproj -> C:\Users\maude\Documents\GitHub\OOP345\WS7\Debug\WS7.exe
+e:\maude\documents\github\oop345\ws7\datatable.h(99): warning C4018: '<': signed/unsigned mismatch
+  e:\maude\documents\github\oop345\ws7\datatable.h(93): note: while compiling class template member function 'void w7::DataTable<float>::display(std::ostream &) const'
+  e:\maude\documents\github\oop345\ws7\datatable.h(115): note: see reference to function template instantiation 'void w7::DataTable<float>::display(std::ostream &) const' being compiled
+  WS7.vcxproj -> E:\maude\Documents\Github\OOP345\WS7\Debug\WS7.exe
