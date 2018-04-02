@@ -1,0 +1,4 @@
+﻿  w8.cpp
+e:\maude\documents\github\oop345\ws8\w8.cpp(16): warning C4018: '<': signed/unsigned mismatch
+e:\maude\documents\github\oop345\ws8\w8.cpp(18): warning C4018: '<': signed/unsigned mismatch
+  WS8.vcxproj -> E:\maude\Documents\Github\OOP345\WS8\Debug\WS8.exe
