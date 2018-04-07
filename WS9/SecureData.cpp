@@ -60,29 +60,63 @@ namespace w10 {
 	}
 
 	void SecureData::code(char key) {
-		//seprate data
-		int noThreads = 8;
 
-		std::vector<std::thread> threads;
-		std::vector<char*> split;
+		int noThreads = 7;
 
 		int tsize = nbytes / noThreads;
 
+
+		auto f1 = std::bind(converter, std::placeholders::_1, key, std::placeholders::_2, Cryptor());
+
+		std::vector<char*> split;
+		std::vector<std::thread> threads;
+
 		for (int i = 0; i < noThreads; i++)
 		{
-			char* t = new char[tsize];
-			strncpy(t, text + (tsize * i), tsize);
-			split.push_back(t);
-			threads.push_back(std::thread(std::bind(converter, key, split[i], tsize, Cryptor())));
+			char* t = nullptr;
+			if (nbytes % noThreads != 0 && i == noThreads - 1)
+			{
+				int ntsize = tsize + (nbytes % noThreads);
+				t = new char[ntsize + 1];
+				strncpy(t, text + (tsize * i), ntsize);
+				split.push_back(t);
+				threads.push_back(std::thread(f1, split[i], ntsize));
+			}
+			else
+			{
+				t = new char[tsize + 1];
+				strncpy(t, text + (tsize * i), tsize);
+				split.push_back(t);
+				threads.push_back(std::thread(f1, split[i], tsize));
+			}
 		}
 
-		for (auto& thread : threads)
-			thread.join();
+		tsize = nbytes / noThreads;
 
-		for (auto& t : split)
-			strcpy(text, t);
+		delete[] text;
+		text = new char[nbytes + 1];
+
+		for (int i = 0; i < noThreads; i++)
+		{
+			threads[i].join();
+			if (nbytes % noThreads != 0 && i == noThreads - 1)
+			{
+				int ntsize = tsize + (nbytes % noThreads);
+				strncpy(text + (tsize * i), split[i], ntsize);
+			}
+			else
+			{
+				strncpy(text + (tsize * i), split[i], tsize);
+			}
+		}
 
 		encoded = !encoded;
+
+		for (int i = 0; i < noThreads; i++)
+		{
+			delete[] split[i];
+			split[i] = nullptr;
+		}
 	}
 
 	void SecureData::backup(const char* file) {
