@@ -1,0 +1,56 @@
+Script started on Sat 07 Apr 2018 05:48:50 PM EDT
+emaude@matrix:~/Documents/OOP345/WS8> g++ -std=0x[K[Kc++0x w8.cpp
+emaude@matrix:~/Documents/OOP345/WS8> ./a.out Descriptions.dat Prices.dat 
+
+Command Line : ./a.out Descriptions.dat Prices.dat 
+
+ Code Description
+ 4662    tomatoes
+ 4039   cucumbers
+ 4056    brocolli
+ 4067      lemons
+ 4068     oranges
+
+
+ Code   Price
+ 4067    0.99
+ 4068    0.67
+ 4039    1.99
+ 4056    2.49
+
+
+ Description   Price
+   cucumbers    1.99
+    brocolli    2.49
+      lemons    0.99
+     oranges    0.67
+
+
+Press any key to continue ... 
+emaude@matrix:~/Documents/OOP345/WS8> A[K./a.out Descriptions.dat Prices.dat [1@B[1@a[1@d
+
+Command Line : ./a.out Descriptions.dat BadPrices.dat 
+
+ Code Description
+ 4662    tomatoes
+ 4039   cucumbers
+ 4056    brocolli
+ 4067      lemons
+ 4068     oranges
+
+
+ Code   Price
+ 4067    0.99
+ 4068    0.67
+ 4039    1.99
+ 4056   -2.49
+
+*** Negative prices are invalid***
+
+Press any key to continue ... 
+emaude@matrix:~/Documents/OOP345/WS8> whoami
+emaude
+emaude@matrix:~/Documents/OOP345/WS8> exit
+exit
+
+Script done on Sat 07 Apr 2018 05:49:45 PM EDT
