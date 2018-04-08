@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\MS3">
+      <UniqueIdentifier>{9b16e224-5c6f-4c89-8c35-a9e50f0bce86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MS2">
+      <UniqueIdentifier>{506dd009-e331-4d06-8a57-696058b3f6d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MS1">
+      <UniqueIdentifier>{5fef7b7b-f6f3-4ffb-a390-233dc12f2cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{f2d81459-91bb-4108-908c-eddb01aef60c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MS1">
+      <UniqueIdentifier>{83225cab-dffc-4ca7-9e5c-90e3e37c3fc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MS2">
+      <UniqueIdentifier>{edf3766e-d8b2-463f-aab8-369be411e50e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MS3">
+      <UniqueIdentifier>{44ad201a-b236-4f27-9e66-38225f7a0a8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Util">
+      <UniqueIdentifier>{a205f302-e990-489b-a644-94e0236d7420}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CustomerItem.cpp">
+      <Filter>Source Files\MS2</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomerOrder.cpp">
+      <Filter>Source Files\MS2</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Source Files\MS2</Filter>
+    </ClCompile>
+    <ClCompile Include="Task.cpp">
+      <Filter>Source Files\MS1</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Milestone_3.cpp">
+      <Filter>Source Files\MS3</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskManager.cpp">
+      <Filter>Source Files\MS3</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderManager.cpp">
+      <Filter>Source Files\MS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemManager.cpp">
+      <Filter>Source Files\MS3</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Utilities.h">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomerItem.h">
+      <Filter>Header Files\MS2</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomerOrder.h">
+      <Filter>Header Files\MS2</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Header Files\MS2</Filter>
+    </ClInclude>
+    <ClInclude Include="Task.h">
+      <Filter>Header Files\MS1</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskManager.h">
+      <Filter>Header Files\MS3</Filter>
+    </ClInclude>
+    <ClInclude Include="OrderManager.h">
+      <Filter>Header Files\MS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemManager.h">
+      <Filter>Header Files\MS3</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
