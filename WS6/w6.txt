@@ -1,0 +1,20 @@
+Script started on Sat 07 Apr 2018 05:53:48 PM EDT
+emaude@matrix:~/Documents/OOP345/WS6> g++ -std=c++0x Product.cpp Sale.cpp TaxableProduct.cpp w6.cpp
+
+emaude@matrix:~/Documents/OOP345/WS6> 
+emaude@matrix:~/Documents/OOP345/WS6>  ./a.out Sales.dat
+Product No      Cost Taxable
+     10012     34.56
+     10023     45.67 HST
+     10234     12.32 PST
+     10056     67.54
+     10029     54.12 HST
+     10034     96.30
+Total         324.47
+Press any key to continue ... 
+emaude@matrix:~/Documents/OOP345/WS6> whoami
+emaude
+emaude@matrix:~/Documents/OOP345/WS6> exit
+exit
+
+Script done on Sat 07 Apr 2018 05:54:09 PM EDT

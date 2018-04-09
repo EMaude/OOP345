@@ -13,7 +13,7 @@
 #define POSITIVE(n) ((n) < 0 ? 0 - (n) : (n))
 
 namespace w7 {
-	template <class T>
+	template <typename T>
 	class DataTable
 	{
 	private:
