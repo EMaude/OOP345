@@ -24,32 +24,43 @@ const std::string Utilities::nextToken(const std::string& in, size_t &pos, bool&
     std::string result;
     more = false;
 
-	result = in.substr(pos, (in.find(delimiter, pos) - pos));
-    
-	if(in.length() > in.find(delimiter, pos))
-    {
-        more = true;
-    }
-
-	pos += trim(result) + result.length() + 1;
-    
-	if(result.length() > field_width)
-    {
-        setFieldWidth(result.length());
-    }
-
-	if (result.empty())
+	if (in.find(delimiter, pos) <= pos + 1)
 	{
-		throw "Empty String";
+		throw in + " <- No token before delimiter";
+		more = false;
 	}
+	else
+	{
+		result = in.substr(pos, (in.find(delimiter, pos) - pos));
 
+		pos += trim(result) + result.length() + 1;
+
+		if (result.find_first_not_of(' ') != std::string::npos && !result.empty())
+		{
+			std::string temp = in;
+			rtrim(temp);
+			if (temp.length() > pos)
+			{
+				more = true;
+			}
+
+			if (result.length() > field_width)
+			{
+				setFieldWidth(result.length());
+			}
+		}
+		else
+		{
+			throw "Empty String";
+		}
+	}
     return result;
 }
 
 int Utilities::ftrim(std::string &str)
 {
 	int i = 0;
-	while (!str.empty() && str.front() == ' ')
+	while (!str.empty() && (str.front() == ' ' || str.front() == '\t'))
 	{
 		str.erase(0, 1); //remove first char
 		i++;
@@ -60,7 +71,7 @@ int Utilities::ftrim(std::string &str)
 int Utilities::rtrim(std::string &str)
 {
 	int i = 0;
-	while (!str.empty() && str.back() == ' ')
+	while (!str.empty() && (str.back() == ' ' || str.back() == '\t'))
 	{
 		str.erase(str.length() - 1, 1);
 		i++;

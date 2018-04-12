@@ -1,2 +1,15 @@
 ﻿  Utilities.cpp
-  MS2.vcxproj -> C:\Users\maude\Documents\GitHub\OOP345\Milestones\MS2\x64\Debug\MS2.exe
+  Milestone_2.cpp
+  CustomerOrder.cpp
+e:\maude\documents\github\oop345\milestones\ms2\customerorder.cpp(70): warning C4018: '<': signed/unsigned mismatch
+e:\maude\documents\github\oop345\milestones\ms2\customerorder.cpp(111): warning C4018: '<': signed/unsigned mismatch
+e:\maude\documents\github\oop345\milestones\ms2\customerorder.cpp(123): warning C4018: '<': signed/unsigned mismatch
+e:\maude\documents\github\oop345\milestones\ms2\customerorder.cpp(145): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Compiling...
+  Task.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Item.cpp
+  CustomerItem.cpp
+  MS2.vcxproj -> E:\maude\Documents\Github\OOP345\Milestones\MS2\x64\Debug\MS2.exe

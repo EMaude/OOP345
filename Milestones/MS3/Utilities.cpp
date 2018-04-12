@@ -24,7 +24,7 @@ const std::string Utilities::nextToken(const std::string& in, size_t &pos, bool&
     std::string result;
     more = false;
 
-	if (in.find(delimiter, pos) <= pos + 1)
+	if (in.find(delimiter, pos) <= pos)
 	{
 		throw in + " <- No token before delimiter";
 		more = false;

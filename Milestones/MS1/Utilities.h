@@ -30,9 +30,9 @@
 
 	 //! gets the next token in a string
 	 /*!
-	 Reads from the provided position in the string until the delimeter in the object is found. Returns a trimmed string from pos to the next delimeter. Sets the feild width to that length if the current field width is shorter.
+	 Reads from the provided position in the string until the delimeter in the object is found. Returns a trimmed string from pos to the next delimeter. Sets the feild width to that length if the current field width is shorter. Adds string length, trimmed characters, and 1 to remove delim to pos. Throws exception if string is empty.
 	 \param in The input string
-	 \param pos The position to start reading from
+	 \param pos The position to start reading from, returns the position that it stopped reading.
 	 \param more Changes the more boolean to true if there is more to read after the delimeter. 
 	 \return trimmed string from pos to the next delimeter
 	 \sa trim(), setDelimiter() and setFieldWidth()

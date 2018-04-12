@@ -4,8 +4,8 @@
 #include <iostream>
 #include <vector>
 
-class Task;
-class ItemManager;
+#include "Task.h"
+#include "ItemManager.h"
 
 class TaskManager : public std::vector<Task>{
 public:
