@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 
-class Item;
+#include "Item.h"
 
 class ItemManager : public std::vector<Item> {
 public:
