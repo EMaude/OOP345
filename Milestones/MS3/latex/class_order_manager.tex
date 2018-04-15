@@ -1,0 +1,58 @@
+\hypertarget{class_order_manager}{}\section{Order\+Manager Class Reference}
+\label{class_order_manager}\index{Order\+Manager@{Order\+Manager}}
+
+
+{\ttfamily \#include $<$Order\+Manager.\+h$>$}
+
+Inheritance diagram for Order\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_order_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_customer_order}{Customer\+Order}} \&\& \mbox{\hyperlink{class_order_manager_a2111b67d23078421bb0c012c25ee87f1}{extract}} ()
+\item 
+void \mbox{\hyperlink{class_order_manager_a5469cae831246813134630f8bd85db79}{validate}} (const \mbox{\hyperlink{class_item_manager}{Item\+Manager}} \&, std\+::ostream \&)
+\item 
+void \mbox{\hyperlink{class_order_manager_a01ff4be0afbb0535de41d5caedcf0016}{display}} (std\+::ostream \&) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_order_manager_a01ff4be0afbb0535de41d5caedcf0016}\label{class_order_manager_a01ff4be0afbb0535de41d5caedcf0016}} 
+\index{Order\+Manager@{Order\+Manager}!display@{display}}
+\index{display@{display}!Order\+Manager@{Order\+Manager}}
+\subsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Order\+Manager\+::display (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const}
+
+Displays the contents of Customer\+Orders in the vector \mbox{\Hypertarget{class_order_manager_a2111b67d23078421bb0c012c25ee87f1}\label{class_order_manager_a2111b67d23078421bb0c012c25ee87f1}} 
+\index{Order\+Manager@{Order\+Manager}!extract@{extract}}
+\index{extract@{extract}!Order\+Manager@{Order\+Manager}}
+\subsubsection{\texorpdfstring{extract()}{extract()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_customer_order}{Customer\+Order}} \&\& Order\+Manager\+::extract (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Extracts the last object from the vector \begin{DoxyReturn}{Returns}
+A move reference to the last vector element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_order_manager_a5469cae831246813134630f8bd85db79}\label{class_order_manager_a5469cae831246813134630f8bd85db79}} 
+\index{Order\+Manager@{Order\+Manager}!validate@{validate}}
+\index{validate@{validate}!Order\+Manager@{Order\+Manager}}
+\subsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily void Order\+Manager\+::validate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_item_manager}{Item\+Manager}} \&}]{im,  }\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})}
+
+checks that the items requested in the customer orders are available. 
+\begin{DoxyParams}{Parameters}
+{\em im} & The item manager object with available items \\
+\hline
+{\em os} & The ostream object for error messages \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_order_manager_8h}{Order\+Manager.\+h}}\item 
+\mbox{\hyperlink{_order_manager_8cpp}{Order\+Manager.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,152 @@
+\hypertarget{class_customer_order}{}\section{Customer\+Order Class Reference}
+\label{class_customer_order}\index{Customer\+Order@{Customer\+Order}}
+
+
+{\ttfamily \#include $<$Customer\+Order.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_customer_order_a0b43beee099ac2772cadd8f3df890701}{Customer\+Order}} (const std\+::string \&)
+\item 
+\mbox{\hyperlink{class_customer_order_ad5d7da49c28e5006f326e1709b072516}{Customer\+Order}} (const \mbox{\hyperlink{class_customer_order}{Customer\+Order}} \&)
+\item 
+\mbox{\hyperlink{class_customer_order}{Customer\+Order}} \& \mbox{\hyperlink{class_customer_order_ae43fcf650924cf82800c6dfe9a20afca}{operator=}} (const \mbox{\hyperlink{class_customer_order}{Customer\+Order}} \&)=delete
+\item 
+\mbox{\hyperlink{class_customer_order_addc080f9b7685c1c2d788b418bca40a8}{Customer\+Order}} (\mbox{\hyperlink{class_customer_order}{Customer\+Order}} \&\&) \mbox{\hyperlink{_customer_order_8h_a10a59554805ac7ce3905fd3540f98137}{N\+O\+E\+X\+C\+E\+PT}}
+\item 
+\mbox{\hyperlink{class_customer_order}{Customer\+Order}} \& \mbox{\hyperlink{class_customer_order_ae2af41f59a0b0856fae309779f915390}{operator=}} (\mbox{\hyperlink{class_customer_order}{Customer\+Order}} \&\&) \mbox{\hyperlink{_customer_order_8h_a10a59554805ac7ce3905fd3540f98137}{N\+O\+E\+X\+C\+E\+PT}}
+\item 
+\mbox{\hyperlink{class_customer_order_ae36af98287386c97b66537ac463b09c6}{$\sim$\+Customer\+Order}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_customer_order_a371158bfa7784275a71ebfd9feb8514b}{no\+Orders}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_customer_order_a8ff1239910926e660ce7692807a7847d}{operator\mbox{[}$\,$\mbox{]}}} (unsigned int) const
+\item 
+void \mbox{\hyperlink{class_customer_order_a317213ffac6bc2765e573893bd3f8507}{fill}} (\mbox{\hyperlink{class_item}{Item}} \&)
+\item 
+void \mbox{\hyperlink{class_customer_order_a8059d5a73bfa388f86671d45835468d6}{remove}} (\mbox{\hyperlink{class_item}{Item}} \&)
+\item 
+bool \mbox{\hyperlink{class_customer_order_a8cfde59bf7a044e21508f5b595e3873c}{empty}} () const
+\item 
+void \mbox{\hyperlink{class_customer_order_a44b8223600dd858b4d4edcbe3704a5a0}{display}} (std\+::ostream \&) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_customer_order_a0b43beee099ac2772cadd8f3df890701}\label{class_customer_order_a0b43beee099ac2772cadd8f3df890701}} 
+\index{Customer\+Order@{Customer\+Order}!Customer\+Order@{Customer\+Order}}
+\index{Customer\+Order@{Customer\+Order}!Customer\+Order@{Customer\+Order}}
+\subsubsection{\texorpdfstring{Customer\+Order()}{CustomerOrder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Customer\+Order\+::\+Customer\+Order (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+Upon instantiation, a \mbox{\hyperlink{class_customer_order}{Customer\+Order}} object receives a reference to an unmodifiable std\+::string. This string contains the information for a single customer order. \mbox{\Hypertarget{class_customer_order_ad5d7da49c28e5006f326e1709b072516}\label{class_customer_order_ad5d7da49c28e5006f326e1709b072516}} 
+\index{Customer\+Order@{Customer\+Order}!Customer\+Order@{Customer\+Order}}
+\index{Customer\+Order@{Customer\+Order}!Customer\+Order@{Customer\+Order}}
+\subsubsection{\texorpdfstring{Customer\+Order()}{CustomerOrder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Customer\+Order\+::\+Customer\+Order (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_customer_order}{Customer\+Order}} \&}]{src }\end{DoxyParamCaption})}
+
+Reports Exception, should never be called \mbox{\Hypertarget{class_customer_order_addc080f9b7685c1c2d788b418bca40a8}\label{class_customer_order_addc080f9b7685c1c2d788b418bca40a8}} 
+\index{Customer\+Order@{Customer\+Order}!Customer\+Order@{Customer\+Order}}
+\index{Customer\+Order@{Customer\+Order}!Customer\+Order@{Customer\+Order}}
+\subsubsection{\texorpdfstring{Customer\+Order()}{CustomerOrder()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Customer\+Order\+::\+Customer\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_customer_order}{Customer\+Order}} \&\&}]{src }\end{DoxyParamCaption})}
+
+noexcept move constructor. 
+\begin{DoxyParams}{Parameters}
+{\em src} & the object to move \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_customer_order_ae36af98287386c97b66537ac463b09c6}\label{class_customer_order_ae36af98287386c97b66537ac463b09c6}} 
+\index{Customer\+Order@{Customer\+Order}!````~Customer\+Order@{$\sim$\+Customer\+Order}}
+\index{````~Customer\+Order@{$\sim$\+Customer\+Order}!Customer\+Order@{Customer\+Order}}
+\subsubsection{\texorpdfstring{$\sim$\+Customer\+Order()}{~CustomerOrder()}}
+{\footnotesize\ttfamily Customer\+Order\+::$\sim$\+Customer\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor frees the memory that holds the orders stored 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_customer_order_a44b8223600dd858b4d4edcbe3704a5a0}\label{class_customer_order_a44b8223600dd858b4d4edcbe3704a5a0}} 
+\index{Customer\+Order@{Customer\+Order}!display@{display}}
+\index{display@{display}!Customer\+Order@{Customer\+Order}}
+\subsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Customer\+Order\+::display (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const}
+
+Inserts into os a description in the format of
+
+the name of the customer left-\/justified in a field of width field\+\_\+width the name of the product left-\/justified in a field of width field\+\_\+width each customer item on a separate line
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The ostream object to insert data into \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_customer_order_a8cfde59bf7a044e21508f5b595e3873c}\label{class_customer_order_a8cfde59bf7a044e21508f5b595e3873c}} 
+\index{Customer\+Order@{Customer\+Order}!empty@{empty}}
+\index{empty@{empty}!Customer\+Order@{Customer\+Order}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool Customer\+Order\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+checks to see if the order is empty \mbox{\Hypertarget{class_customer_order_a317213ffac6bc2765e573893bd3f8507}\label{class_customer_order_a317213ffac6bc2765e573893bd3f8507}} 
+\index{Customer\+Order@{Customer\+Order}!fill@{fill}}
+\index{fill@{fill}!Customer\+Order@{Customer\+Order}}
+\subsubsection{\texorpdfstring{fill()}{fill()}}
+{\footnotesize\ttfamily void Customer\+Order\+::fill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_item}{Item}} \&}]{item }\end{DoxyParamCaption})}
+
+searches through the customer items and fills those order for the customer items identified by item if any have not been filled. This function increments item\textquotesingle{}s code for each customer item filled. This keeps the item code unique for each order. 
+\begin{DoxyParams}{Parameters}
+{\em item} & The item to match to the customer items \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_customer_order_a371158bfa7784275a71ebfd9feb8514b}\label{class_customer_order_a371158bfa7784275a71ebfd9feb8514b}} 
+\index{Customer\+Order@{Customer\+Order}!no\+Orders@{no\+Orders}}
+\index{no\+Orders@{no\+Orders}!Customer\+Order@{Customer\+Order}}
+\subsubsection{\texorpdfstring{no\+Orders()}{noOrders()}}
+{\footnotesize\ttfamily unsigned int Customer\+Order\+::no\+Orders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Returns the number of orders stored in the object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_customer_order_ae43fcf650924cf82800c6dfe9a20afca}\label{class_customer_order_ae43fcf650924cf82800c6dfe9a20afca}} 
+\index{Customer\+Order@{Customer\+Order}!operator=@{operator=}}
+\index{operator=@{operator=}!Customer\+Order@{Customer\+Order}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_customer_order}{Customer\+Order}}\& Customer\+Order\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_customer_order}{Customer\+Order}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_customer_order_ae2af41f59a0b0856fae309779f915390}\label{class_customer_order_ae2af41f59a0b0856fae309779f915390}} 
+\index{Customer\+Order@{Customer\+Order}!operator=@{operator=}}
+\index{operator=@{operator=}!Customer\+Order@{Customer\+Order}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_customer_order}{Customer\+Order}} \& Customer\+Order\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_customer_order}{Customer\+Order}} \&\&}]{src }\end{DoxyParamCaption})}
+
+noexcept move operator. 
+\begin{DoxyParams}{Parameters}
+{\em src} & the object to move \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_customer_order_a8ff1239910926e660ce7692807a7847d}\label{class_customer_order_a8ff1239910926e660ce7692807a7847d}} 
+\index{Customer\+Order@{Customer\+Order}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Customer\+Order@{Customer\+Order}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily const std\+::string \& Customer\+Order\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{i }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+returns the name of the order stored at the index i. Checks bounds on i. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_customer_order_a8059d5a73bfa388f86671d45835468d6}\label{class_customer_order_a8059d5a73bfa388f86671d45835468d6}} 
+\index{Customer\+Order@{Customer\+Order}!remove@{remove}}
+\index{remove@{remove}!Customer\+Order@{Customer\+Order}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Customer\+Order\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_item}{Item}} \&}]{item }\end{DoxyParamCaption})}
+
+searches through the customer items and removes the items that match 
+\begin{DoxyParams}{Parameters}
+{\em item} & The item to match to the customer items \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_customer_order_8h}{Customer\+Order.\+h}}\item 
+\mbox{\hyperlink{_customer_order_8cpp}{Customer\+Order.\+cpp}}\end{DoxyCompactItemize}

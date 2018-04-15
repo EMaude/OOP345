@@ -12,7 +12,7 @@ void OrderManager::validate(const ItemManager &im, std::ostream &os)
 	{
 		for (int i = 0; i < std::vector<CustomerOrder>::at(j).noOrders(); i++)
 		{
-			bool bad = std::none_of(im.begin(), im.end(), [&](auto b) {
+			bool bad = std::none_of(im.begin(), im.end(), [&](Item b) {
 				return std::vector<CustomerOrder>::at(j)[i] == b.getName();
 			});
 

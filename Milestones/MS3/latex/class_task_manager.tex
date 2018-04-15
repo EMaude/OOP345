@@ -1,0 +1,60 @@
+\hypertarget{class_task_manager}{}\section{Task\+Manager Class Reference}
+\label{class_task_manager}\index{Task\+Manager@{Task\+Manager}}
+
+
+{\ttfamily \#include $<$Task\+Manager.\+h$>$}
+
+Inheritance diagram for Task\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_task_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_task_manager_a2ae3c30ca4e030440b64c383cbda8a73}{validate}} (std\+::ostream \&)
+\item 
+void \mbox{\hyperlink{class_task_manager_a59aea57b2ad273d6d95797f93d737fa0}{validate}} (const \mbox{\hyperlink{class_item_manager}{Item\+Manager}} \&, std\+::ostream \&)
+\item 
+void \mbox{\hyperlink{class_task_manager_a3564901af8fa7498b0fcca85fcaa5e64}{display}} (std\+::ostream \&) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_task_manager_a3564901af8fa7498b0fcca85fcaa5e64}\label{class_task_manager_a3564901af8fa7498b0fcca85fcaa5e64}} 
+\index{Task\+Manager@{Task\+Manager}!display@{display}}
+\index{display@{display}!Task\+Manager@{Task\+Manager}}
+\subsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Task\+Manager\+::display (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const}
+
+Displays the contents of Tasks in the vector \mbox{\Hypertarget{class_task_manager_a2ae3c30ca4e030440b64c383cbda8a73}\label{class_task_manager_a2ae3c30ca4e030440b64c383cbda8a73}} 
+\index{Task\+Manager@{Task\+Manager}!validate@{validate}}
+\index{validate@{validate}!Task\+Manager@{Task\+Manager}}
+\subsubsection{\texorpdfstring{validate()}{validate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Task\+Manager\+::validate (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})}
+
+Validates all Tasks in the vector 
+\begin{DoxyParams}{Parameters}
+{\em os} & Error Message output \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_task_manager_a59aea57b2ad273d6d95797f93d737fa0}\label{class_task_manager_a59aea57b2ad273d6d95797f93d737fa0}} 
+\index{Task\+Manager@{Task\+Manager}!validate@{validate}}
+\index{validate@{validate}!Task\+Manager@{Task\+Manager}}
+\subsubsection{\texorpdfstring{validate()}{validate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Task\+Manager\+::validate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_item_manager}{Item\+Manager}} \&}]{im,  }\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})}
+
+Validates all Tasks used by items in \mbox{\hyperlink{class_item}{Item}} Manager are in the vector 
+\begin{DoxyParams}{Parameters}
+{\em im} & The \mbox{\hyperlink{class_item}{Item}} Manager \\
+\hline
+{\em os} & Error Message output \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_task_manager_8h}{Task\+Manager.\+h}}\item 
+\mbox{\hyperlink{_task_manager_8cpp}{Task\+Manager.\+cpp}}\end{DoxyCompactItemize}

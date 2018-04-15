@@ -1,0 +1,132 @@
+\hypertarget{class_item}{}\section{Item Class Reference}
+\label{class_item}\index{Item@{Item}}
+
+
+{\ttfamily \#include $<$Item.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_item_a878f8ff05023bb47d42bf2c2a98da323}{Item}} (const std\+::string \&=std\+::string())
+\begin{DoxyCompactList}\small\item\em Creates a item, either in a safe state or based on the string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_item_a8a1745ce42e5695d5c63c62bd5be7d8e}{empty}} () const
+\begin{DoxyCompactList}\small\item\em checks if \mbox{\hyperlink{class_item}{Item}} is empty \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_item}{Item}} \& \mbox{\hyperlink{class_item_a818f9273ed8889c8b27cb97d2c292e77}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em Adds to item code. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_item_a359a6949cfad6cfb7f7d85e132525056}{get\+Code}} () const
+\begin{DoxyCompactList}\small\item\em Gets the code value. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_item_a906722df9ab3f424d32c4106ff64aa15}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name string. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_item_a67903e1bcdd09d0857295a33b5fbeb6b}{get\+Filler}} () const
+\begin{DoxyCompactList}\small\item\em gets the filler string \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_item_a259c9f359ed2378aae4cbb5ea53bef18}{get\+Remover}} () const
+\begin{DoxyCompactList}\small\item\em gets the remover string \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_item_a9433e55e0165564bbbdb77bd01853728}{display}} (std\+::ostream \&, bool=false) const
+\begin{DoxyCompactList}\small\item\em Inserts into os the name of the item and its current code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_item_a878f8ff05023bb47d42bf2c2a98da323}\label{class_item_a878f8ff05023bb47d42bf2c2a98da323}} 
+\index{Item@{Item}!Item@{Item}}
+\index{Item@{Item}!Item@{Item}}
+\subsubsection{\texorpdfstring{Item()}{Item()}}
+{\footnotesize\ttfamily Item\+::\+Item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})}
+
+
+
+Creates a item, either in a safe state or based on the string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string that the item information is populated with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_utilities_a59c27deae1e3810d8591b35ed90b7f33}{Utilities\+::next\+Token()}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_item_a9433e55e0165564bbbdb77bd01853728}\label{class_item_a9433e55e0165564bbbdb77bd01853728}} 
+\index{Item@{Item}!display@{display}}
+\index{display@{display}!Item@{Item}}
+\subsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Item\+::display (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{bool}]{full = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+
+
+Inserts into os the name of the item and its current code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to write to \\
+\hline
+{\em full} & If the full flag is true, this function includes a complete description of the item. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_item_a8a1745ce42e5695d5c63c62bd5be7d8e}\label{class_item_a8a1745ce42e5695d5c63c62bd5be7d8e}} 
+\index{Item@{Item}!empty@{empty}}
+\index{empty@{empty}!Item@{Item}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool Item\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+checks if \mbox{\hyperlink{class_item}{Item}} is empty 
+
+\mbox{\Hypertarget{class_item_a359a6949cfad6cfb7f7d85e132525056}\label{class_item_a359a6949cfad6cfb7f7d85e132525056}} 
+\index{Item@{Item}!get\+Code@{get\+Code}}
+\index{get\+Code@{get\+Code}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+Code()}{getCode()}}
+{\footnotesize\ttfamily unsigned int Item\+::get\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the code value. 
+
+\mbox{\Hypertarget{class_item_a67903e1bcdd09d0857295a33b5fbeb6b}\label{class_item_a67903e1bcdd09d0857295a33b5fbeb6b}} 
+\index{Item@{Item}!get\+Filler@{get\+Filler}}
+\index{get\+Filler@{get\+Filler}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+Filler()}{getFiller()}}
+{\footnotesize\ttfamily const std\+::string \& Item\+::get\+Filler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+gets the filler string 
+
+\mbox{\Hypertarget{class_item_a906722df9ab3f424d32c4106ff64aa15}\label{class_item_a906722df9ab3f424d32c4106ff64aa15}} 
+\index{Item@{Item}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& Item\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name string. 
+
+\mbox{\Hypertarget{class_item_a259c9f359ed2378aae4cbb5ea53bef18}\label{class_item_a259c9f359ed2378aae4cbb5ea53bef18}} 
+\index{Item@{Item}!get\+Remover@{get\+Remover}}
+\index{get\+Remover@{get\+Remover}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+Remover()}{getRemover()}}
+{\footnotesize\ttfamily const std\+::string \& Item\+::get\+Remover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+gets the remover string 
+
+\mbox{\Hypertarget{class_item_a818f9273ed8889c8b27cb97d2c292e77}\label{class_item_a818f9273ed8889c8b27cb97d2c292e77}} 
+\index{Item@{Item}!operator++@{operator++}}
+\index{operator++@{operator++}!Item@{Item}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_item}{Item}} \& Item\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Adds to item code. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_item_8h}{Item.\+h}}\item 
+\mbox{\hyperlink{_item_8cpp}{Item.\+cpp}}\end{DoxyCompactItemize}

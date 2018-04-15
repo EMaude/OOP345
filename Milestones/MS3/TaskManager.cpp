@@ -21,12 +21,12 @@ void TaskManager::validate(std::ostream &os)
 }
 void TaskManager::validate(const ItemManager &im, std::ostream &os)
 {
-	std::for_each(im.begin(), im.end(), [&](auto a) {
-		bool goodFill = std::any_of(std::vector<Task>::begin(), std::vector<Task>::end(), [&](auto b) {
+	std::for_each(im.begin(), im.end(), [&](Item a) {
+		bool goodFill = std::any_of(std::vector<Task>::begin(), std::vector<Task>::end(), [&](Task b) {
 			return a.getFiller() == b.getName();
 		});
 
-		bool goodRem = std::any_of(std::vector<Task>::begin(), std::vector<Task>::end(), [&](auto b) {
+		bool goodRem = std::any_of(std::vector<Task>::begin(), std::vector<Task>::end(), [&](Task b) {
 			return a.getRemover() == b.getName();
 		});
 
@@ -43,5 +43,5 @@ void TaskManager::validate(const ItemManager &im, std::ostream &os)
 } 
 void TaskManager::display(std::ostream &os) const
 {
-	std::for_each(std::vector<Task>::begin(), std::vector<Task>::end(), [&](auto a) { a.display(os); });
+	std::for_each(std::vector<Task>::begin(), std::vector<Task>::end(), [&](Task a) { a.display(os); });
 }

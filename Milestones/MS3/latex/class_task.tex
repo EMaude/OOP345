@@ -1,0 +1,187 @@
+\hypertarget{class_task}{}\section{Task Class Reference}
+\label{class_task}\index{Task@{Task}}
+
+
+Holds the structure of a task.  
+
+
+
+
+{\ttfamily \#include $<$Task.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_task_a6b8b1fc5858cbd77055e79d6381282fb}{Quality}} \{ \mbox{\hyperlink{class_task_a6b8b1fc5858cbd77055e79d6381282fbafc26836e15aeaddaab5eaca6d03dadba}{passed}}, 
+\mbox{\hyperlink{class_task_a6b8b1fc5858cbd77055e79d6381282fba9a7ec146540b101a16e2da2bd61e5b59}{redirect}}
+ \}
+\begin{DoxyCompactList}\small\item\em Used to select the next task to complete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_task_ace3ff25451f6d46f6cc0f2d7ed4b16ef}{Task}} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em Initalizes to a safe state, then reads the tokens from the parameter string to populate data. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_task_a0c1ae0dd618c9b8ae35591040d3776f3}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the name of the task. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_task_a974eb3143ac070fd67495f3c4a108a96}{validate}} (const \mbox{\hyperlink{class_task}{Task}} \&)
+\begin{DoxyCompactList}\small\item\em Validates and stores the next tasks. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_task_a67589413dbb0d5ffa3b2f08c6fa461ea}{get\+Slots}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of production slots avaliable to the task. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_task}{Task}} $\ast$ \mbox{\hyperlink{class_task_acf6851078d506896872fa7cc6476e5bf}{get\+Next\+Task}} (\mbox{\hyperlink{class_task_a6b8b1fc5858cbd77055e79d6381282fb}{Quality}}) const
+\begin{DoxyCompactList}\small\item\em Returns the next task based on Quality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_task_aff00aecd7c14bd02434b76ad10a656a2}{display}} (std\+::ostream \&) const
+\begin{DoxyCompactList}\small\item\em Displays the current task to the ostream object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_task_a18f265f8b4a37e5ed047034c2558068b}{get\+Field\+Width}} ()
+\begin{DoxyCompactList}\small\item\em Returns the feild width for the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Holds the structure of a task. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_task_a6b8b1fc5858cbd77055e79d6381282fb}\label{class_task_a6b8b1fc5858cbd77055e79d6381282fb}} 
+\index{Task@{Task}!Quality@{Quality}}
+\index{Quality@{Quality}!Task@{Task}}
+\subsubsection{\texorpdfstring{Quality}{Quality}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_task_a6b8b1fc5858cbd77055e79d6381282fb}{Task\+::\+Quality}}}
+
+
+
+Used to select the next task to complete. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{passed@{passed}!Task@{Task}}\index{Task@{Task}!passed@{passed}}}\mbox{\Hypertarget{class_task_a6b8b1fc5858cbd77055e79d6381282fbafc26836e15aeaddaab5eaca6d03dadba}\label{class_task_a6b8b1fc5858cbd77055e79d6381282fbafc26836e15aeaddaab5eaca6d03dadba}} 
+passed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{redirect@{redirect}!Task@{Task}}\index{Task@{Task}!redirect@{redirect}}}\mbox{\Hypertarget{class_task_a6b8b1fc5858cbd77055e79d6381282fba9a7ec146540b101a16e2da2bd61e5b59}\label{class_task_a6b8b1fc5858cbd77055e79d6381282fba9a7ec146540b101a16e2da2bd61e5b59}} 
+redirect&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_task_ace3ff25451f6d46f6cc0f2d7ed4b16ef}\label{class_task_ace3ff25451f6d46f6cc0f2d7ed4b16ef}} 
+\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\subsubsection{\texorpdfstring{Task()}{Task()}}
+{\footnotesize\ttfamily Task\+::\+Task (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Initalizes to a safe state, then reads the tokens from the parameter string to populate data. 
+
+The constructor initializes the number of product slots to a default value of 1 and the pointers to the next tasks to safe addresses. The constructor then uses a \mbox{\hyperlink{class_utilities}{Utilities}} object to extract each token from the record. Once the constructor has extracted all of the tokens from the record, it retrieves the maximum field width needed by the extracted tokens. If that field width is greater than field\+\_\+width, the constructor resets this class variable to the value retrieved. 
+\begin{DoxyParams}{Parameters}
+{\em in} & -\/ a string which contains a single record in the structure of\+: Name $\vert$ Slots $\vert$ Success\+Task $\vert$ Fail\+Task \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_utilities_a59c27deae1e3810d8591b35ed90b7f33}{Utilities\+::next\+Token()}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_task_aff00aecd7c14bd02434b76ad10a656a2}\label{class_task_aff00aecd7c14bd02434b76ad10a656a2}} 
+\index{Task@{Task}!display@{display}}
+\index{display@{display}!Task@{Task}}
+\subsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Task\+::display (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const}
+
+
+
+Displays the current task to the ostream object. 
+
+uses the field width to display the name, slots and next task(s) in the current object. Throws exception if string is empty. 
+\begin{DoxyParams}{Parameters}
+{\em os} & The ostream object to output to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_task_a18f265f8b4a37e5ed047034c2558068b}\label{class_task_a18f265f8b4a37e5ed047034c2558068b}} 
+\index{Task@{Task}!get\+Field\+Width@{get\+Field\+Width}}
+\index{get\+Field\+Width@{get\+Field\+Width}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+Field\+Width()}{getFieldWidth()}}
+{\footnotesize\ttfamily static size\+\_\+t Task\+::get\+Field\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the feild width for the class. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t of the feild width from the tokens that have been stored in the class 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_task_a0c1ae0dd618c9b8ae35591040d3776f3}\label{class_task_a0c1ae0dd618c9b8ae35591040d3776f3}} 
+\index{Task@{Task}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& Task\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the name of the task. 
+
+\begin{DoxyReturn}{Returns}
+Const reference to the task name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_task_acf6851078d506896872fa7cc6476e5bf}\label{class_task_acf6851078d506896872fa7cc6476e5bf}} 
+\index{Task@{Task}!get\+Next\+Task@{get\+Next\+Task}}
+\index{get\+Next\+Task@{get\+Next\+Task}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+Next\+Task()}{getNextTask()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_task}{Task}} $\ast$ Task\+::get\+Next\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_task_a6b8b1fc5858cbd77055e79d6381282fb}{Quality}}}]{q }\end{DoxyParamCaption}) const}
+
+
+
+Returns the next task based on Quality. 
+
+The selected Quality is used to select which of the stored tasks should be next. 
+\begin{DoxyParams}{Parameters}
+{\em q} & -\/ The Quality that has been selected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the selected task 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_task_a6b8b1fc5858cbd77055e79d6381282fb}{Quality}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_task_a67589413dbb0d5ffa3b2f08c6fa461ea}\label{class_task_a67589413dbb0d5ffa3b2f08c6fa461ea}} 
+\index{Task@{Task}!get\+Slots@{get\+Slots}}
+\index{get\+Slots@{get\+Slots}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+Slots()}{getSlots()}}
+{\footnotesize\ttfamily unsigned int Task\+::get\+Slots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of production slots avaliable to the task. 
+
+\begin{DoxyReturn}{Returns}
+An integer of the slots converted from string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_task_a974eb3143ac070fd67495f3c4a108a96}\label{class_task_a974eb3143ac070fd67495f3c4a108a96}} 
+\index{Task@{Task}!validate@{validate}}
+\index{validate@{validate}!Task@{Task}}
+\subsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily bool Task\+::validate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_task}{Task}} \&}]{task }\end{DoxyParamCaption})}
+
+
+
+Validates and stores the next tasks. 
+
+compares the name of the parameter task to the next tasks stored in the current object. If the names match the address of the passed task is stored. 
+\begin{DoxyParams}{Parameters}
+{\em task} & -\/ Reference to the task to validate against \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean -\/ true if both tasks in the object either point to another task object, or have no name. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_task_8h}{Task.\+h}}\item 
+\mbox{\hyperlink{_task_8cpp}{Task.\+cpp}}\end{DoxyCompactItemize}

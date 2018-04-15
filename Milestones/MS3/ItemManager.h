@@ -11,7 +11,7 @@ public:
 	/*!
 	inserts into os descriptions of each item stored in the base class container. 
 	\param full specifies whether a full description of the item should be inserted.
-
+	\param os The os object to display to
 	*/
 	void display(std::ostream&, bool = false) const;
 };

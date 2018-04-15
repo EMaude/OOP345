@@ -1,0 +1,99 @@
+\hypertarget{class_customer_item}{}\section{Customer\+Item Class Reference}
+\label{class_customer_item}\index{Customer\+Item@{Customer\+Item}}
+
+
+{\ttfamily \#include $<$Customer\+Item.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_customer_item_a7868c9be14aced9e5e6f657a0e5671fc}{Customer\+Item}} (const std\+::string \&=std\+::string())
+\item 
+bool \mbox{\hyperlink{class_customer_item_a6275dac4b75e3cd8e56f504140cd135d}{asks\+For}} (const \mbox{\hyperlink{class_item}{Item}} \&) const
+\item 
+bool \mbox{\hyperlink{class_customer_item_a39f6b78f595b7d4a20f1e7f945834335}{is\+Filled}} () const
+\item 
+void \mbox{\hyperlink{class_customer_item_a31c01c091f1ebc623a66d80235bc5e8c}{fill}} (const unsigned int)
+\item 
+void \mbox{\hyperlink{class_customer_item_af6a25490940dcac3842f877ea0da4580}{clear}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{class_customer_item_a7922e8405fdcfff7ca45decd2a54efdc}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{class_customer_item_a2aaa8551a3662bb4b2953704580fc408}{display}} (std\+::ostream \&) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_customer_item_a7868c9be14aced9e5e6f657a0e5671fc}\label{class_customer_item_a7868c9be14aced9e5e6f657a0e5671fc}} 
+\index{Customer\+Item@{Customer\+Item}!Customer\+Item@{Customer\+Item}}
+\index{Customer\+Item@{Customer\+Item}!Customer\+Item@{Customer\+Item}}
+\subsubsection{\texorpdfstring{Customer\+Item()}{CustomerItem()}}
+{\footnotesize\ttfamily Customer\+Item\+::\+Customer\+Item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})}
+
+The constructor initializes the name identifying the item requested to the name received or to an empty state if no name was specified, initializes filled to false and initializes the item code to 0. 
+\begin{DoxyParams}{Parameters}
+{\em str} & The constructor initializes the name identifying the item requested to the name received or to an empty state if no name was specified, initializes filled to false and initializes the item code to 0. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_customer_item_a6275dac4b75e3cd8e56f504140cd135d}\label{class_customer_item_a6275dac4b75e3cd8e56f504140cd135d}} 
+\index{Customer\+Item@{Customer\+Item}!asks\+For@{asks\+For}}
+\index{asks\+For@{asks\+For}!Customer\+Item@{Customer\+Item}}
+\subsubsection{\texorpdfstring{asks\+For()}{asksFor()}}
+{\footnotesize\ttfamily bool Customer\+Item\+::asks\+For (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_item}{Item}} \&}]{in }\end{DoxyParamCaption}) const}
+
+returns true if the current object asks for item; false otherwise 
+\begin{DoxyParams}{Parameters}
+{\em in} & The item to check against \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_customer_item_af6a25490940dcac3842f877ea0da4580}\label{class_customer_item_af6a25490940dcac3842f877ea0da4580}} 
+\index{Customer\+Item@{Customer\+Item}!clear@{clear}}
+\index{clear@{clear}!Customer\+Item@{Customer\+Item}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Customer\+Item\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+resets the item code for the current object to 0 and resets the status of the current object to not filled \mbox{\Hypertarget{class_customer_item_a2aaa8551a3662bb4b2953704580fc408}\label{class_customer_item_a2aaa8551a3662bb4b2953704580fc408}} 
+\index{Customer\+Item@{Customer\+Item}!display@{display}}
+\index{display@{display}!Customer\+Item@{Customer\+Item}}
+\subsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Customer\+Item\+::display (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const}
+
+inserts into os a description of the customer item as shown in the sample output listed below. The description consists of
+
+the symbol + or -\/ identifying the fill status of the item request the code printed on the item if filled or 0 if not filled in a field width of C\+O\+D\+E\+\_\+\+W\+I\+D\+TH padded with 0s and enclosed within brackets the name of the customer item 
+\begin{DoxyParams}{Parameters}
+{\em os} & the ostream object to write to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_customer_item_a31c01c091f1ebc623a66d80235bc5e8c}\label{class_customer_item_a31c01c091f1ebc623a66d80235bc5e8c}} 
+\index{Customer\+Item@{Customer\+Item}!fill@{fill}}
+\index{fill@{fill}!Customer\+Item@{Customer\+Item}}
+\subsubsection{\texorpdfstring{fill()}{fill()}}
+{\footnotesize\ttfamily void Customer\+Item\+::fill (\begin{DoxyParamCaption}\item[{const unsigned int}]{in }\end{DoxyParamCaption})}
+
+Sets the item code for the current object to the value received and switches the status of the current object to filled 
+\begin{DoxyParams}{Parameters}
+{\em in} & The item code to set the current object to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_customer_item_a7922e8405fdcfff7ca45decd2a54efdc}\label{class_customer_item_a7922e8405fdcfff7ca45decd2a54efdc}} 
+\index{Customer\+Item@{Customer\+Item}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Customer\+Item@{Customer\+Item}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& Customer\+Item\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+gets object name \mbox{\Hypertarget{class_customer_item_a39f6b78f595b7d4a20f1e7f945834335}\label{class_customer_item_a39f6b78f595b7d4a20f1e7f945834335}} 
+\index{Customer\+Item@{Customer\+Item}!is\+Filled@{is\+Filled}}
+\index{is\+Filled@{is\+Filled}!Customer\+Item@{Customer\+Item}}
+\subsubsection{\texorpdfstring{is\+Filled()}{isFilled()}}
+{\footnotesize\ttfamily bool Customer\+Item\+::is\+Filled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the filled boolean 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_customer_item_8h}{Customer\+Item.\+h}}\item 
+\mbox{\hyperlink{_customer_item_8cpp}{Customer\+Item.\+cpp}}\end{DoxyCompactItemize}

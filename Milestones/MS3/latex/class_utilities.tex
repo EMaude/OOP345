@@ -1,0 +1,218 @@
+\hypertarget{class_utilities}{}\section{Utilities Class Reference}
+\label{class_utilities}\index{Utilities@{Utilities}}
+
+
+Holds various utilities.  
+
+
+
+
+{\ttfamily \#include $<$Utilities.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_utilities_ab1676c9ce35cf347a73d16f1094e1271}{Utilities}} ()
+\begin{DoxyCompactList}\small\item\em Sets field width to 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_utilities_a90cee9218e3faff9bd060beda0e83e17}{set\+Field\+Width}} (size\+\_\+t fw)
+\begin{DoxyCompactList}\small\item\em Sets the objects field width. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_utilities_a94abc3ceade71097979e76e15008efba}{get\+Field\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Gets the objects field width. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{class_utilities_a59c27deae1e3810d8591b35ed90b7f33}{next\+Token}} (const std\+::string \&, size\+\_\+t \&, bool \&)
+\begin{DoxyCompactList}\small\item\em gets the next token in a string \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_utilities_a8f3e9e16a823944a3bdb67c6c3d70d08}{ftrim}} (std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em trims whitespace from the front of a string \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_utilities_afffccc73f8e56740fdf789904bf268ee}{rtrim}} (std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em trims whitespace from the back of a string \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_utilities_ac71774c0324d441f542665f8f372a113}{trim}} (std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em trims whitespace from a string \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_utilities_a5d0e249841a1ec89395a1810fa81354f}{set\+Delimiter}} (const char del)
+\begin{DoxyCompactList}\small\item\em sets the class variable delimiter \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_utilities_a4d03fd38f07e567277b82b8a0e030245}{set\+Log\+File}} (const char $\ast$log)
+\begin{DoxyCompactList}\small\item\em Opens a log file held in the class variable log\+File. \end{DoxyCompactList}\item 
+static std\+::ofstream \& \mbox{\hyperlink{class_utilities_aecd7de50b27a709a9810b17940074cad}{get\+Log\+File}} ()
+\begin{DoxyCompactList}\small\item\em Gets the log\+File reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Holds various utilities. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_utilities_ab1676c9ce35cf347a73d16f1094e1271}\label{class_utilities_ab1676c9ce35cf347a73d16f1094e1271}} 
+\index{Utilities@{Utilities}!Utilities@{Utilities}}
+\index{Utilities@{Utilities}!Utilities@{Utilities}}
+\subsubsection{\texorpdfstring{Utilities()}{Utilities()}}
+{\footnotesize\ttfamily Utilities\+::\+Utilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets field width to 1. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_utilities_a8f3e9e16a823944a3bdb67c6c3d70d08}\label{class_utilities_a8f3e9e16a823944a3bdb67c6c3d70d08}} 
+\index{Utilities@{Utilities}!ftrim@{ftrim}}
+\index{ftrim@{ftrim}!Utilities@{Utilities}}
+\subsubsection{\texorpdfstring{ftrim()}{ftrim()}}
+{\footnotesize\ttfamily int Utilities\+::ftrim (\begin{DoxyParamCaption}\item[{std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+trims whitespace from the front of a string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & the string to trim \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters trimmed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utilities_a94abc3ceade71097979e76e15008efba}\label{class_utilities_a94abc3ceade71097979e76e15008efba}} 
+\index{Utilities@{Utilities}!get\+Field\+Width@{get\+Field\+Width}}
+\index{get\+Field\+Width@{get\+Field\+Width}!Utilities@{Utilities}}
+\subsubsection{\texorpdfstring{get\+Field\+Width()}{getFieldWidth()}}
+{\footnotesize\ttfamily size\+\_\+t Utilities\+::get\+Field\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the objects field width. 
+
+\mbox{\Hypertarget{class_utilities_aecd7de50b27a709a9810b17940074cad}\label{class_utilities_aecd7de50b27a709a9810b17940074cad}} 
+\index{Utilities@{Utilities}!get\+Log\+File@{get\+Log\+File}}
+\index{get\+Log\+File@{get\+Log\+File}!Utilities@{Utilities}}
+\subsubsection{\texorpdfstring{get\+Log\+File()}{getLogFile()}}
+{\footnotesize\ttfamily static std\+::ofstream\& Utilities\+::get\+Log\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Gets the log\+File reference. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the ofstream class variable log\+File 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_utilities_a4d03fd38f07e567277b82b8a0e030245}{set\+Log\+File()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_utilities_a59c27deae1e3810d8591b35ed90b7f33}\label{class_utilities_a59c27deae1e3810d8591b35ed90b7f33}} 
+\index{Utilities@{Utilities}!next\+Token@{next\+Token}}
+\index{next\+Token@{next\+Token}!Utilities@{Utilities}}
+\subsubsection{\texorpdfstring{next\+Token()}{nextToken()}}
+{\footnotesize\ttfamily const std\+::string Utilities\+::next\+Token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{in,  }\item[{size\+\_\+t \&}]{pos,  }\item[{bool \&}]{more }\end{DoxyParamCaption})}
+
+
+
+gets the next token in a string 
+
+Reads from the provided position in the string until the delimeter in the object is found. Returns a trimmed string from pos to the next delimeter. Sets the feild width to that length if the current field width is shorter. Adds string length, trimmed characters, and 1 to remove delim to pos. Throws exception if string is empty. 
+\begin{DoxyParams}{Parameters}
+{\em in} & The input string \\
+\hline
+{\em pos} & The position to start reading from, returns the position that it stopped reading. \\
+\hline
+{\em more} & Changes the more boolean to true if there is more to read after the delimeter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+trimmed string from pos to the next delimeter 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_utilities_ac71774c0324d441f542665f8f372a113}{trim()}}, \mbox{\hyperlink{class_utilities_a5d0e249841a1ec89395a1810fa81354f}{set\+Delimiter()}} and \mbox{\hyperlink{class_utilities_a90cee9218e3faff9bd060beda0e83e17}{set\+Field\+Width()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_utilities_afffccc73f8e56740fdf789904bf268ee}\label{class_utilities_afffccc73f8e56740fdf789904bf268ee}} 
+\index{Utilities@{Utilities}!rtrim@{rtrim}}
+\index{rtrim@{rtrim}!Utilities@{Utilities}}
+\subsubsection{\texorpdfstring{rtrim()}{rtrim()}}
+{\footnotesize\ttfamily int Utilities\+::rtrim (\begin{DoxyParamCaption}\item[{std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+trims whitespace from the back of a string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & the string to trim \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters trimmed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utilities_a5d0e249841a1ec89395a1810fa81354f}\label{class_utilities_a5d0e249841a1ec89395a1810fa81354f}} 
+\index{Utilities@{Utilities}!set\+Delimiter@{set\+Delimiter}}
+\index{set\+Delimiter@{set\+Delimiter}!Utilities@{Utilities}}
+\subsubsection{\texorpdfstring{set\+Delimiter()}{setDelimiter()}}
+{\footnotesize\ttfamily static void Utilities\+::set\+Delimiter (\begin{DoxyParamCaption}\item[{const char}]{del }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+sets the class variable delimiter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em del} & char to set the delimiter to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_utilities_a90cee9218e3faff9bd060beda0e83e17}\label{class_utilities_a90cee9218e3faff9bd060beda0e83e17}} 
+\index{Utilities@{Utilities}!set\+Field\+Width@{set\+Field\+Width}}
+\index{set\+Field\+Width@{set\+Field\+Width}!Utilities@{Utilities}}
+\subsubsection{\texorpdfstring{set\+Field\+Width()}{setFieldWidth()}}
+{\footnotesize\ttfamily void Utilities\+::set\+Field\+Width (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{fw }\end{DoxyParamCaption})}
+
+
+
+Sets the objects field width. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fw} & -\/ the value for the feild width of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+get\+Feild\+Width() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_utilities_a4d03fd38f07e567277b82b8a0e030245}\label{class_utilities_a4d03fd38f07e567277b82b8a0e030245}} 
+\index{Utilities@{Utilities}!set\+Log\+File@{set\+Log\+File}}
+\index{set\+Log\+File@{set\+Log\+File}!Utilities@{Utilities}}
+\subsubsection{\texorpdfstring{set\+Log\+File()}{setLogFile()}}
+{\footnotesize\ttfamily static void Utilities\+::set\+Log\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Opens a log file held in the class variable log\+File. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log} & filename to open in trunc mode \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_utilities_ac71774c0324d441f542665f8f372a113}\label{class_utilities_ac71774c0324d441f542665f8f372a113}} 
+\index{Utilities@{Utilities}!trim@{trim}}
+\index{trim@{trim}!Utilities@{Utilities}}
+\subsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily int Utilities\+::trim (\begin{DoxyParamCaption}\item[{std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+trims whitespace from a string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & the string to trim \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters trimmed 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_utilities_a8f3e9e16a823944a3bdb67c6c3d70d08}{ftrim()}} and \mbox{\hyperlink{class_utilities_afffccc73f8e56740fdf789904bf268ee}{rtrim()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_utilities_8h}{Utilities.\+h}}\item 
+\mbox{\hyperlink{_utilities_8cpp}{Utilities.\+cpp}}\end{DoxyCompactItemize}

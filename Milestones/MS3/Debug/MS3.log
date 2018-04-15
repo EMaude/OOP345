@@ -1,5 +1,12 @@
-﻿  OrderManager.cpp
+﻿  TaskManager.cpp
+e:\maude\documents\github\oop345\milestones\ms3\taskmanager.cpp(6): warning C4018: '<': signed/unsigned mismatch
+e:\maude\documents\github\oop345\milestones\ms3\taskmanager.cpp(9): warning C4018: '<': signed/unsigned mismatch
+  OrderManager.cpp
 e:\maude\documents\github\oop345\milestones\ms3\ordermanager.cpp(11): warning C4018: '<': signed/unsigned mismatch
 e:\maude\documents\github\oop345\milestones\ms3\ordermanager.cpp(13): warning C4018: '<': signed/unsigned mismatch
 e:\maude\documents\github\oop345\milestones\ms3\ordermanager.cpp(29): warning C4018: '<': signed/unsigned mismatch
+  ItemManager.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Milestone_3.cpp
   MS3.vcxproj -> E:\maude\Documents\Github\OOP345\Milestones\MS3\Debug\MS3.exe
