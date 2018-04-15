@@ -3,17 +3,30 @@
 
 CustomerOrder &&OrderManager::extract()
 {
-	auto temp = std::move(std::vector<CustomerOrder>::back());
-	std::vector<CustomerOrder>::pop_back();
-	return std::move(temp);
+	return std::move(std::vector<CustomerOrder>::back());
 }
 
 void OrderManager::validate(const ItemManager &im, std::ostream &os)
 {
-	os << "WIP" << std::endl;
+	for (int j = 0; j < std::vector<CustomerOrder>::size(); j++)
+	{
+		for (int i = 0; i < std::vector<CustomerOrder>::at(j).noOrders(); i++)
+		{
+			bool bad = std::none_of(im.begin(), im.end(), [&](auto b) {
+				return std::vector<CustomerOrder>::at(j)[i] == b.getName();
+			});
+
+			if (bad)
+			{
+				os << std::vector<CustomerOrder>::at(j)[i] << " is Unavailable" << std::endl;
+			}
+		}
+	};
 }
 
 void OrderManager::display(std::ostream &os) const
 {
-	std::for_each(std::vector<CustomerOrder>::begin(), std::vector<CustomerOrder>::end(), [&](auto a) { a.display(os); });
+	for (int i = 0; i < std::vector<CustomerOrder>::size(); i++) {
+		std::vector<CustomerOrder>::at(i).display(os);
+	}
 }

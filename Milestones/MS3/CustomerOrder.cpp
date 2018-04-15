@@ -98,7 +98,7 @@ unsigned int CustomerOrder::noOrders() const
 
 const std::string& CustomerOrder::operator[](unsigned int i) const
 {
-	if (i < nOrders || i < 0)
+	if (i > nOrders || i < 0)
 	{
 		std::cerr << "Out of range" << std::endl;
 		i = 0;
