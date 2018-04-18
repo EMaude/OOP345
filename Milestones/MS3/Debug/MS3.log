@@ -1,12 +1,21 @@
-﻿  TaskManager.cpp
-e:\maude\documents\github\oop345\milestones\ms3\taskmanager.cpp(6): warning C4018: '<': signed/unsigned mismatch
-e:\maude\documents\github\oop345\milestones\ms3\taskmanager.cpp(9): warning C4018: '<': signed/unsigned mismatch
-  OrderManager.cpp
-e:\maude\documents\github\oop345\milestones\ms3\ordermanager.cpp(11): warning C4018: '<': signed/unsigned mismatch
-e:\maude\documents\github\oop345\milestones\ms3\ordermanager.cpp(13): warning C4018: '<': signed/unsigned mismatch
-e:\maude\documents\github\oop345\milestones\ms3\ordermanager.cpp(29): warning C4018: '<': signed/unsigned mismatch
+﻿  CustomerItem.cpp
+  CustomerOrder.cpp
+c:\users\maude\documents\github\oop345\milestones\ms3\customerorder.cpp(70): warning C4018: '<': signed/unsigned mismatch
+c:\users\maude\documents\github\oop345\milestones\ms3\customerorder.cpp(111): warning C4018: '<': signed/unsigned mismatch
+c:\users\maude\documents\github\oop345\milestones\ms3\customerorder.cpp(123): warning C4018: '<': signed/unsigned mismatch
+c:\users\maude\documents\github\oop345\milestones\ms3\customerorder.cpp(145): warning C4018: '<': signed/unsigned mismatch
+  Item.cpp
+c:\users\maude\documents\github\oop345\milestones\ms3\item.cpp(64): warning C4101: 'msg': unreferenced local variable
   ItemManager.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
   Milestone_3.cpp
-  MS3.vcxproj -> E:\maude\Documents\Github\OOP345\Milestones\MS3\Debug\MS3.exe
+  OrderManager.cpp
+c:\users\maude\documents\github\oop345\milestones\ms3\ordermanager.cpp(11): warning C4018: '<': signed/unsigned mismatch
+c:\users\maude\documents\github\oop345\milestones\ms3\ordermanager.cpp(13): warning C4018: '<': signed/unsigned mismatch
+c:\users\maude\documents\github\oop345\milestones\ms3\ordermanager.cpp(29): warning C4018: '<': signed/unsigned mismatch
+  Task.cpp
+  TaskManager.cpp
+c:\users\maude\documents\github\oop345\milestones\ms3\taskmanager.cpp(6): warning C4018: '<': signed/unsigned mismatch
+c:\users\maude\documents\github\oop345\milestones\ms3\taskmanager.cpp(9): warning C4018: '<': signed/unsigned mismatch
+  Utilities.cpp
+  Generating Code...
+  MS3.vcxproj -> C:\Users\maude\Documents\GitHub\OOP345\Milestones\MS3\Debug\MS3.exe
